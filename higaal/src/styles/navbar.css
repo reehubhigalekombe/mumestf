@@ -1,0 +1,100 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 999;
+    background-color: transparent;
+    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.nav-top {
+    flex: 1;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+.contacts a {
+    text-decoration: none;
+    color: black;
+}
+.nav-top button {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: yellow;
+
+}
+.nav-bot {
+    flex: 2;
+    display: flex;
+    gap: 3px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.nav-bot .links {
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+}
+.main-pages {
+    position: relative;
+    display: inline-block;
+}
+.sub-pages {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    z-index: 1000;
+    background-color: white;
+    flex-direction: column;
+    box-shadow:  0px 8px 16px rgba(0,0,0,0.2) ;
+}
+.sub-pages a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+.sub-pages a:hover {
+    background-color: rgb(207, 205, 205);
+}
+.main-pages:hover .sub-pages {
+    display: flex;
+}
+.sub-pages .but-admin {
+    padding: 6px 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+}
+.nav-bot img {
+    width: 100px;
+    border-radius: 90px;
+}
