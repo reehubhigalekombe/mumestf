@@ -1,0 +1,160 @@
+
+.footer {
+    width: 100%;
+    background-color: rgb(129, 222, 129);
+    color: white; 
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .social-media {
+    gap: 40px;
+  
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    font-size: 80px;
+    gap:  50px;
+    
+  }
+  .social-media a .socio-icons { 
+    color: white;
+    font-size: 40px;
+  }
+  .social-media a  .socio-icons:hover {
+    color: red;
+  }
+  .footer-bot {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+  }
+  .partion,
+  .partion1,
+  .partion2 {
+    flex: 1; 
+    margin: 0 10px; 
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    border-right: 2px solid white; 
+  }
+  
+  .partion2 {
+    border-right: none;
+  }
+  
+  .partion h2,
+  .partion1 h2,
+  .partion2 h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-contacts {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .icons {
+    margin-right: 0.5rem;
+  }
+.footer-links {
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+    margin: 5px 0;
+  }
+  .footer-icons {
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+    margin: 5px 0;
+
+  }.footer-icons:hover {
+    color: white;
+  }
+
+
+  
+  .footer-links:hover {
+    color: whitesmoke;
+  }
+  
+
+  .footer-right img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .footer-right h4 {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: lighter;
+  }
+  
+
+  .bot-down {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .horizontal {
+    border: 0;
+    border-top: 2px solid white;
+    margin-bottom: 10px;
+  }
+  
+  h4 {
+    margin: 5px 0;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    color: rgb(16, 15, 15);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-bot {
+        flex-direction: column;
+        text-align: center;
+    }
+    .partion, .partion1, .partion2 {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        border-bottom: 2px solid white;
+        margin: 0.625rem 0;
+    }
+    .partion2 {
+        border-bottom: none;
+    }
+    .footer-right img {
+        width: 100px;
+        height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .social-media a .socio-icons {
+        font-size: 35px;
+    }
+    .footer-links, .footer-icons {
+        font-size: 1rem;
+    }
+    .horizontal {
+        width: 80%;
+        margin:  0.65rem auto;
+        border-top: 2px solid white;
+
+    }
+    h4 {
+        font-size: 16px;
+    }
+  }

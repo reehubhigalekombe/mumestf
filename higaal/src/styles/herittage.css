@@ -1,0 +1,77 @@
+.herittage {
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.heri1 {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.heri1 h1 {
+    font-size: 3rem;
+}
+.heri1 h2 {
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.heri-middle {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.middle1 {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.middle2 {
+    flex: 5;
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+.middle3 {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ 
+
+}
+.middle2 h1 {
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+
+.middle2 hr {
+    width: 80%;
+    margin-left: 0px;
+}
+.heri2 {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px;
+    gap: 20px;
+}
+.herittgae-images {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 0.5rem;
+    display: block;
+}

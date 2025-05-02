@@ -2,8 +2,7 @@ import React from 'react';
 import "../styles/navbar.css"
 import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import logo1 from "../assets/cgd2.jpeg";
-import logo2 from "../assets/cdf1.jpeg"
+
 
 function Navbar() {
   return (
@@ -29,21 +28,16 @@ function Navbar() {
 
 </div>
 <div className='nav-bot'>
-<img src={logo1} alt='logo'  />
+<img src="http://localhost:5000/uploads/cgd2.jpeg" alt='logo'  />
 <div className='main-pages'>
 <Link to="/home" className='links'>HOME</Link>
-<div className='sub-pages'>
-    <Link to="/welcome">Welcome</Link>
-    <Link to="/mission">Mission and Vission</Link>
-    <Link to="/latest">Latest News</Link>
-</div>
 </div>
 
 <div className='main-pages'>
 <Link to="/about" className='links'>ABOUT</Link>
 <div className='sub-pages'>
-    <Link to="/welcome">Heritage</Link>
-    <Link to="/welcome">Wards</Link>
+    <Link to="/herittage">Herittage</Link>
+    <Link to="/wards">Wards</Link>
     <Link to="/mission">Mission and Vission</Link>
     <Link to="/latest">Latest News</Link>
 </div>
@@ -53,7 +47,7 @@ function Navbar() {
 <Link to="/about" className='links'>BURSARIES</Link>
 <div className='sub-pages'>
     <Link to="/welcome">Eligibilty & Application</Link>
-    <Link to="/mission">Students Portal</Link>
+    <Link to="/student">Students Portal</Link>
     <Link to="/latest">Application Form</Link>
     <Link to="/welcome">Status Tracking</Link>
     <Link to="/welcome">Downloads</Link>
@@ -62,7 +56,7 @@ function Navbar() {
 </div>
 
 <div className='main-pages'>
-<Link to="/about" className='links'>PUBLIC</Link>
+<Link to="/public" className='links'>PUBLIC</Link>
 <div className='sub-pages'>
     <Link to="/welcome">Public forms</Link>
     <Link to="/mission">Concerns Status</Link>
@@ -114,7 +108,7 @@ function Navbar() {
 </div>
 </div>
     <button className='but-admin'>ADMIN</button>
-    <img src={logo2} alt='logo'  />
+    <img src="http://localhost:5000/uploads/cdf1.jpeg" alt='logo'  />
 </div>
     </div>
   )
