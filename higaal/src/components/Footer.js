@@ -26,10 +26,11 @@ function Footer() {
         </div>
 <div className='footer-contacts'>
       <FaEnvelope className='icons'/>
-         <a href='mailto:elonreagnanp@gmail.com' className='footer-icons'> info@mumiaseast.go.ke</a>
+         <a href='mailto:elonreagnanp@gmail.com' className='footer-icons'> cdfmumiaseast@ngcdf.go.ke</a>
 </div>
-<div className='footer-contacts'> <FaMapMarkerAlt  className='icons' />
-        P . O. BOX 50106 Shianda, Kakamega</div>
+<div className='footer-contacts'>
+   <Link to="/contacts" className='footer-icons'>    <FaMapMarkerAlt  className='icons' />  P . O. BOX 50106 Shianda, Kakamega</Link>
+        </div>
 <div className='footer-contacts'>Open  24hrs - 24/7</div>
      
 </div>
@@ -43,11 +44,13 @@ function Footer() {
 </div>
 <div className='partion2'>
 <div className='footer-right'>
-          <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'><img src="http://localhost:5000/uploads/pa1.jpeg" alt='pa'/></a>
+          <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'>
+          <img src="http://localhost:5000/uploads/pa1.jpeg" alt='pa'/></a>
           <h4>Parliament of Kenya</h4>
           </div>
 <div className='footer-right'>
-      <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'><img src="http://localhost:5000/uploads/pt1.jpg" alt='pa'/></a>
+      <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'>
+      <img src="http://localhost:5000/uploads/pt1.jpg" alt='pa'/></a>
       <h4>  Hon. Peter Kalerwa Salasya (Incumbent)
       </h4>
       </div>

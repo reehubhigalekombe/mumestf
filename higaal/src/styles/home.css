@@ -1,6 +1,93 @@
 .home {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: justify;
+}
+.home-top {
+  flex: 1;
+  background-color: black;
+
+}
+.home-bottom {
+  flex: 2;
+  display: flex;;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+  margin-bottom: 20px;
+
+}
+.home-botleft {
+  padding-left: 10px;
+  flex: 2;
+
+}
+.home-botright {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home-botright h1 {
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+}
+.home-botright p {
+  font-size: 40px;
+  color: white;
+  
+}
+
+.home-bottom  button {
+  width: 22%;
+  padding: 8px 16px;
+  background-color: green;
+  font-weight: bold;
+}
+
+.home-bottom  button:hover {
+  background-color: rgb(107, 102, 102);
+  transition: trasnform 0.3s ease ease-in-out;
+  color: black;
+}
+form  {
+  width: 100%;
+  background-color: white;
+}
+
+form fieldset {
+  border: 1px solid rgb(12, 12, 12);
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
 
 
+ form img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
+
+form h1 {
+  color: red;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-top: 0 ;
+  margin-bottom: 0px;
+}
+form p {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0px;
 }

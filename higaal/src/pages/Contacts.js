@@ -1,15 +1,16 @@
+
 import React from 'react';
+import '../styles/contacts.css';
 
 
-
-function Public() {
+function Contacts() {
   const labels = ["One", "Two", "Three", "Four", "Five", "Six", "Center"];
 
 const positions = [
-  { top: "-10px", left: "90px" },   //
+  { top: "-30px", left: "90px" },   //
   { top: "-10", left: "230px" },      // top right
-  { top: "140px", left: "200px" },   // bottom right
-  { top: "200px", left: "90px" },   // bottom
+  { top: "140px", left: "210px" },   // bottom right
+  { top: "210px", left: "90px" },   // bottom
   { top: "130px", left: "-20px" },    // bottom left
   { top: "-10", left: "-40px" },       // top left
   { top: "90px", left: "95px" },    // center
@@ -17,7 +18,7 @@ const positions = [
 
   return (
     
-    <div className='public'>
+    <div className='contacts'>
       <div className="hex-container">
       {positions.map((pos, index) => (
         <div
@@ -34,4 +35,4 @@ const positions = [
   );
 }
 
-export default Public;
+export default Contacts;

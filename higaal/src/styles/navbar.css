@@ -1,22 +1,19 @@
 .navbar {
     width: 100%;
-    height: 150px;
+    height: auto;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: transparent;
-
-
+    background-color: rgb(129, 222, 129);
+    border-radius: 8px;
 }
 .nav-top {
     flex: 1;
     display: flex;
-    background-color: transparent;
+    flex-direction: row;
     justify-content: center;
-    padding: 10px;
-    flex-wrap: wrap;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 10px;
     gap: 20px;
 }
 .contacts {
@@ -44,11 +41,32 @@
 .nav-bot {
     flex: 2;
     display: flex;
-    gap: 3px;
-    text-decoration: none;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+.logo1 {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+}
+.logo-middle {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo2 {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logo2 button {
+    background-color: rgb(79, 79, 193);
+    padding: 1px 3px;
+
 }
 .nav-bot .links {
     text-decoration: none;
@@ -83,21 +101,15 @@
 }
 .sub-pages a:hover {
     background-color: rgb(207, 205, 205);
+    color: black;
 }
 .main-pages:hover .sub-pages {
     display: flex;
 }
-.sub-pages .but-admin {
-    padding: 6px 10px;
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 8px;
-}
 .nav-bot img {
-    width: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 90px;
 }
-.nav-bot button {
 
-}
+

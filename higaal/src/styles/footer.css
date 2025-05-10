@@ -88,8 +88,8 @@
   
 
   .footer-right img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin-bottom: 10px;
   }
@@ -111,6 +111,7 @@
     border: 0;
     border-top: 2px solid white;
     margin-bottom: 10px;
+    width: 75%;
   }
   
   h4 {
