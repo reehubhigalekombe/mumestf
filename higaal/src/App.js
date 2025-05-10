@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
+        <Route path="/" element={<Navigate to="/auth"/>}/>
         <Route path="/auth"  element={<AuthenticationPage/>}/>
 <Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}/>
 <Route path="/mission" element={<Mission/>}/>

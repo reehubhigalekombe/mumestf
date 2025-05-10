@@ -1,37 +1,11 @@
-import React from 'react';
-
-
+import React from 'react'
 
 function Public() {
-  const labels = ["One", "Two", "Three", "Four", "Five", "Six", "Center"];
-
-const positions = [
-  { top: "-10px", left: "90px" },   //
-  { top: "-10", left: "230px" },      // top right
-  { top: "140px", left: "200px" },   // bottom right
-  { top: "200px", left: "90px" },   // bottom
-  { top: "130px", left: "-20px" },    // bottom left
-  { top: "-10", left: "-40px" },       // top left
-  { top: "90px", left: "95px" },    // center
-];
-
   return (
-    
-    <div className='public'>
-      <div className="hex-container">
-      {positions.map((pos, index) => (
-        <div
-          key={index}
-          className={`hex ${index === 6 ? 'center' : ''}`}
-          style={{ top: pos.top, left: pos.left }}
-        >
-          <span>{labels[index]}</span>
-        </div>
-      ))}
-      </div>
-     
+    <div>
+      <h1>hello World</h1>
     </div>
-  );
+  )
 }
 
-export default Public;
+export default Public
