@@ -28,16 +28,6 @@
     text-decoration: none;
     color: black;
 }
-.nav-top button {
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 8px;
-    background-color: yellow;
-
-}
 .nav-bot {
     flex: 2;
     display: flex;

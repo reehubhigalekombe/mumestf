@@ -20,6 +20,9 @@ import PrivateRoute from "./components/PrivateRoute";
 import Public from "./pages/Public";
 import FloatingButton from "./pages/FloatingButton";
 import Testimonies from "./pages/Testimonies";
+import Signin from "./pages/Signin";
+import Login from "./pages/Login"
+import Logout from "./pages/Logout"
 function App() {
   return (
     <div className="App">
@@ -28,13 +31,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/auth"/>}/>
         <Route path="/auth"  element={<AuthenticationPage/>}/>
-<Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}/>
+<Route path="/home" element={<Home/>}/>
 <Route path="/mission" element={<Mission/>}/>
 <Route path="/contacts" element={<PrivateRoute><Contacts/></PrivateRoute>}/>
 <Route path="/herittage" element={<Herittage/>}/>
-<Route path="/wards" element={<PrivateRoute><Wards/></PrivateRoute>}/>
+<Route path="/wards" element={<Wards/>}/>
 <Route path="/latest" element={<Latest/>}/>
-<Route path="/testmonies" element={<Testimonies/>}/>
+<Route path="/sign" element={<Signin/>}/>
+<Route path="/login" element={<Login/>} />
+<Route  path="/logout"  element={<Logout/>}  />
+
+<Route path="/testimonies" element={<Testimonies/>}/>
 <Route path="/herri" element={<HerittageImages/>}/>
 <Route path="/student" element={<Student/>}/>
 <Route path="/public" element={<Public/>}/>

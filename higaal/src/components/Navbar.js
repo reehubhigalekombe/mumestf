@@ -60,8 +60,10 @@ function Navbar() {
 <div className='main-pages'>
 <Link to="/public" className='links'>PUBLIC</Link>
 <div className='sub-pages'>
-    <Link to="/welcome">Public forms</Link>
+    <Link to="/sign">Signin</Link>
+    <Link to="/login">Login</Link>
     <Link to="/mission">Concerns Status</Link>
+    <Link to="auth">AuthenticationPage</Link>
 </div>
 </div>
  

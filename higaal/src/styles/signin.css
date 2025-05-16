@@ -1,0 +1,87 @@
+.signin-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sign-left {
+    flex: 1;
+    background-image: url("http://localhost:5000/uploads/p3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
+
+}
+.sign-right {
+    flex: 1;
+}
+.sign-right h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.sign-right p {
+    color: rgb(92, 90, 90);
+    font-size: 18px;
+}
+.input-arrange {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.input-arrange .pass-container {
+    position: relative;
+    flex: 1;
+}
+.input-arrange .pass-container span {
+    position: absolute;
+    top: 50%;
+    right: 0.85rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(109, 106, 106);
+}
+.input-arrange .pass-container input {
+    height: 32px;
+    width: 90%;
+    
+}
+.input-arrange:last-child {
+    display: flex;
+    justify-content: flex-start;
+}
+.input-arrange input {
+    width: 90%;
+    flex: 1;
+    height: 32px;
+    border: 1px solid grey;
+    transition: border-color 0.5s ease-in-out;
+}
+.input-arrange input:focus  {
+    outline: none;
+    
+}
+
+.sign-right button {
+    cursor: pointer;
+    background-color: rgb(129, 222, 129);
+    padding: 8px 16px;
+    width: 15%;
+    color: white;
+}
+.sign-right button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+    

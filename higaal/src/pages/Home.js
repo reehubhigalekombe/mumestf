@@ -1,11 +1,14 @@
 import React from 'react'
 import "../styles/home.css"
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function Home() {
+  const navigate = useNavigate();
   return (
     <div className='home'>
      <div className='home-top'>
 <h1>Hello World</h1>
+<button onClick={ () => navigate("/logout")}>Logout</button>
       </div>
 
       <div className='home-bottom'>
@@ -36,14 +39,35 @@ function Home() {
               <p>Mumias East is doing <strong ><em style={{color: "blue"}}>TREMENDOUSLY</em></strong> good in terms of implimenting ground breaking project!!🚀🚀🚀</p>
             </fieldset>          
           </form>
-          <button ><Link to="/testmonies" style={{textDecoration: "none", 
-            ontWeight: "bold", color: "white"}}>Click for More  &rarr;</Link></button>
+          <Link to="/testmonies" className='home-butleft'>Click for More  &rarr;</Link>
         </div>
-        <div className='home-botright' style={{backgroundImage: `url("http://localhost:5000/uploads/newceo.jpg")`}}>
-          <h1> Mumias East:</h1>
-          <h1>Kakamega's Finest</h1>
-          <p>Our Constituency is a Zero Corruption Zone, this creates an enabling environment for vibrant growth🙌🥳✍️</p>
-        </div>        
+        <div className='home-botright'>
+          <div className='cirlces-container'>
+            <div className='circle'> 26+</div>
+            <div className='title'>
+              <a href='/home'>Projects</a>
+            </div>
+          </div>
+          <div className='divide'/>
+
+          <div className='cirlces-container'>
+            <div className='circle1'>
+              501+
+            </div>
+            <div className='title'>
+            <a href='/home'>Bussaries</a>
+            </div>
+          </div>
+          <div className='divide'/>
+          <div className='cirlces-container'>
+            <div className='circle2'> 15+</div>
+            <div className='title'>
+              <a href='/home'>Tenders </a>
+            </div>
+          </div>
+
+        </div>    
+
       </div>
     </div>
   )
