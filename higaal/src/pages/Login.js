@@ -6,6 +6,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff"
 
 function Login() {
+  const[showPassword, setShowPassword] = useState(false);
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
     const[rememberMe, setRememberMe] = useState(false);
@@ -57,12 +58,20 @@ function Login() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder='Email'
         required/>
-        <input type='password'  
+       <div className='pass-container' >
+         <input type={showPassword ? "text" : "password"}
         value={password} 
         onChange={(e) => setPassword(e.target.value)}
         placeholder='Password'
         required
         />
+        <span 
+        onClick={() => setShowPassword(v => !v)} 
+        >
+          {showPassword ? <Visibility/> : <VisibilityOff/>}
+
+        </span >
+       </div>
         <div className='remember'>
         <input type='checkbox'
 
@@ -72,7 +81,7 @@ function Login() {
         />
         <label htmlFor='rememberMe'>Remember Me</label>
         </div>
-        <Link to="forgot">Forgot Password?</Link>
+        <Link to="/forgot" style={{textDecoration: "none"}}>Forgot Password?</Link>
         <h2>Don't have Account? <Link to="/sign" style={{textDecoration: "none", color: "blue"}}>Register</Link></h2>
         <button type='submit'>Login</button>
       </form>

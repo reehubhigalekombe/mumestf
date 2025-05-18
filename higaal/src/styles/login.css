@@ -54,9 +54,10 @@
 input {
     width: 50%;
     outline: none;
-    height: 32px;
+    height: 30px;
     border: 1px solid grey;
-    transition: border-color 0.5s ease-in-out
+    transition: border-color 0.5s ease-in-out;
+    background-color: white;
 }
 form h2 {
     font-size: 20px;
@@ -65,4 +66,26 @@ form h2 {
 }
 .reg {
     text-decoration: none;
+}
+
+.login-right .pass-container {
+    position: relative;
+    width: 53.5%;
+    margin-bottom: 16px;
+}
+.login-right .pass-container input {
+    width: 100%;
+    height: 50px;
+    padding-right: 2.0rem;
+    box-sizing: border-box;
+}
+
+.login-right .pass-container span{
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -62,6 +62,8 @@ function Navbar() {
 <div className='sub-pages'>
     <Link to="/sign">Signin</Link>
     <Link to="/login">Login</Link>
+    <Link to="/forgot">Forgot Password</Link>
+ <Link to="/reset">ResetPass</Link>
     <Link to="/mission">Concerns Status</Link>
     <Link to="auth">AuthenticationPage</Link>
 </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
 import {
   BrowserRouter as Router,
@@ -21,8 +20,11 @@ import Public from "./pages/Public";
 import FloatingButton from "./pages/FloatingButton";
 import Testimonies from "./pages/Testimonies";
 import Signin from "./pages/Signin";
-import Login from "./pages/Login"
-import Logout from "./pages/Logout"
+import Login from "./pages/Login";
+import Logout from "./pages/Logout";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPass from "./pages/ResetPass";
+
 function App() {
   return (
     <div className="App">
@@ -40,11 +42,12 @@ function App() {
 <Route path="/sign" element={<Signin/>}/>
 <Route path="/login" element={<Login/>} />
 <Route  path="/logout"  element={<Logout/>}  />
-
 <Route path="/testimonies" element={<Testimonies/>}/>
 <Route path="/herri" element={<HerittageImages/>}/>
 <Route path="/student" element={<Student/>}/>
 <Route path="/public" element={<Public/>}/>
+<Route path="/forgot" element={<ForgotPassword/>} />
+<Route path="/reset-password/:token" element={<ResetPass/>} />
 
       </Routes>
       <FloatingButton/>
