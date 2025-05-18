@@ -1,10 +1,108 @@
-import React from 'react';
+import {useState} from 'react';
 import "../styles/navbar.css"
-import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from "react-icons/fa";
+import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const[menuOpen, setMenuOpen] = useState(false);
+    const[openSubMenuIndex, setOpenSubMenuIndex]  = useState(null);
+const toggleSubMenu = (index) => {
+    setOpenSubMenuIndex(openSubMenuIndex ===  index ? null : index)
+};
+
+    const mainPages = [
+        {
+            title: "HOME",
+            link: "/home", 
+            subpages: [
+
+            ]
+        },
+        {title: "ABOUT",
+            link: "/herittage",
+            subpages: [
+                {
+                    title: "Herittage", link: "/herittage"
+                },
+                {
+                    title: "Wards", link: "/wards"
+                },
+                {
+                    title: "Latest News", link: "/latest"
+                }
+            ],
+        },
+        {
+            title: "BURSARIES", link: "/student",
+            subpages: [
+                {
+                    title: "Eligibility & Application", link: "/welcome"
+                },
+                {
+                    title: "Students Portal", link: "/student"
+                }, {
+                    title: "Application Form", link: "/welcome"
+                },
+                {
+                    title: "Status Tracking", link: "/welcome"
+                },
+                {
+                    title: "Downloads", link: "/download"
+                }
+
+            ]
+        },
+        {
+            title: "PUBLIC", link: "/public",
+            subpages: [
+                {
+                    title: "Public Portal", link: "/public"
+                }
+            ]
+        },
+             {
+            title: "LEADERSHIP", link: "/leadership",
+            subpages: [
+                {
+                    title: "MPS PROFILE", link: "/profile"
+                }
+            ]
+        },
+         {
+            title: "PROJECTS", link: "/projects",
+            subpages: [
+                    {
+                    title: "Completed Projects", link: "/completed"
+                },
+                     {
+                    title: "Commenced Projects", link: "/commense"
+                },
+            ]
+        },
+         {
+            title: "TENDERS", link: "/tenders",
+                  subpages: [
+
+            ]
+        },
+         {
+            title: "DOWNLOADS", link: "/dowloads",
+                  subpages: [
+
+            ]
+        },
+         {
+            title: "CONTACTS", link: "/contacts",
+                  subpages: [
+
+            ]
+        
+        },
+
+    ]
+
   return (
+
     <div className='navbar'>
 <div className='nav-top'>
 
@@ -30,86 +128,50 @@ function Navbar() {
 <div className='logo1'>
 <img src="http://localhost:5000/uploads/cgd2.jpeg" alt='logo'/>
 </div>
-<div className='logo-middle'>
 
-<div className='main-pages'>
-<Link to="/home" className='links'>HOME</Link>
-</div>
-
-<div className='main-pages'>
-<Link to="/herittage" className='links'>ABOUT</Link>
-<div className='sub-pages'>
-    <Link to="/herittage">Herittage</Link>
-    <Link to="/wards">Wards</Link>
-    <Link to="/latest">Latest News</Link>
-</div>
+<div className='menu-bar'
+onClick={() => setMenuOpen(!menuOpen)}>
+{menuOpen ? <FaTimes size={26} /> : <FaBars size={26}  />  }
 </div>
 
-<div className='main-pages'>
-<Link to="/student" className='links'>BURSARIES</Link>
-<div className='sub-pages'>
-    <Link to="/welcome">Eligibilty & Application</Link>
-    <Link to="/student">Students Portal</Link>
-    <Link to="/latest">Application Form</Link>
-    <Link to="/welcome">Status Tracking</Link>
-    <Link to="/welcome">Downloads</Link>
-    
-</div>
-</div>
+<div className={`logo-middle ${menuOpen ? "open" : ""}`}>
+    {mainPages.map((page, index) => (
+        <div className='main-pages' key={index}  >
+            <Link to={page.link} className='links' 
+            onClick={(e) => {
+                if(page.subpages.length > 0) {
+                    e.preventDefault();
+                    toggleSubMenu(index)
+                }
+            } }
+            >
+{page.title}
+            </Link>
 
-<div className='main-pages'>
-<Link to="/public" className='links'>PUBLIC</Link>
-<div className='sub-pages'>
-    <Link to="/sign">Signin</Link>
-    <Link to="/login">Login</Link>
-    <Link to="/forgot">Forgot Password</Link>
- <Link to="/reset">ResetPass</Link>
-    <Link to="/mission">Concerns Status</Link>
-    <Link to="auth">AuthenticationPage</Link>
-</div>
-</div>
- 
+            {page.subpages.length > 0 && (
+                <div className={`subpages ${
+                    openSubMenuIndex === index ? "open" : ""
+                }`}
+                >
+            {page.subpages.map((sub, subIndex) => (
+                <Link
+                to={sub.link} key={subIndex}               
+                >
+                {sub.title}
+                </Link>
+            )
+        ) }
 
-<div className='main-pages'>
-<Link to="/about" className='links'>LEARDERSHIP</Link>
-<div className='sub-pages'>
-    <Link to="/welcome">MPS Profile</Link>
-    <Link to="/mission">Staff</Link>
 
-</div>
-</div>
+                    </div>
+            )}
 
-<div className='main-pages'>
-<Link to="/about" className='links'>PROJECTS</Link>
-<div className='sub-pages'>
-    <Link to="/welcome">Completed</Link>
-    <Link to="/mission">On-going</Link>
-    <Link to="/latest">Up-coming</Link>
-</div>
-</div>
+            </div>
 
-<div className='main-pages'>
-<Link to="/about" className='links'>TENDERS</Link>
-<div className='sub-pages'>
-    <Link to="/welcome">Welcome</Link>
-    <Link to="/mission">Mission and Vission</Link>
-    <Link to="/latest">Latest News</Link>
-</div>
-</div>
-<div className='main-pages'>
-<Link to="/about" className='links'>DOWNLOADS</Link>
-<div className='sub-pages'>
-    <Link to="/mission">Reports</Link>
-    <Link to="/latest">Forms and Policy</Link>
-    <Link to="/welcome">Policy</Link>
-</div>
-</div>
-
-<div className='main-pages'>
-<Link to="/contacts" className='links'>CONTACTS</Link>
+    ))}
 
 </div>
-</div>
+
 
 <div className='logo2'>
 <button>Admin</button> 

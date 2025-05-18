@@ -11,9 +11,13 @@
 .forgot form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
-    width: 250px;
-    height: auto;
+    width: 350px;
+    height: 250px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 8px;
 }
 .forgot h2 {
     color: rgb(10, 9, 9);
@@ -22,7 +26,7 @@
 }
 
 .forgot h4 {
-    margin-top: 50px;
+    margin-top: 10px;
     color: rgb(116, 115, 115);
      font-size: 16px;
     font-weight: lighter;
@@ -35,7 +39,7 @@
 
 }
 .forgot form input {
-    width: 100%;
+    width: 70%;
     height: 25px;
     margin-bottom: 12px;
     border: 1px solid rgb(144, 143, 143);
@@ -43,12 +47,12 @@
 
 .forgot form button {
     background-color: rgb(129, 222, 129);
-    width: 50%;
+    padding: 8px 10px;
     cursor: pointer;
-    color: rgb(7, 7, 7);
+    color: white;
     border: none;
-    padding: 8px;
     font-size: 12px;
+    width: auto;
 }
 
 .forgot form button:hover {

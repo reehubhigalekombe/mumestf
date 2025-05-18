@@ -47,7 +47,6 @@
     align-items: center;
 }
 .logo2 {
-    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,29 +70,30 @@
     position: relative;
     display: inline-block;
 }
-.sub-pages {
+.subpages {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 170px;
     z-index: 1000;
     background-color: white;
-    flex-direction: column;
+    border-radius: 8px;
     box-shadow:  0px 8px 16px rgba(0,0,0,0.2) ;
 }
-.sub-pages a {
+.subpages a {
     color: black;
     display: block;
     text-decoration: none;
     padding: 10px 16px;
     border-radius: 8px;
 }
-.sub-pages a:hover {
+.subpages a:hover {
     background-color: rgb(207, 205, 205);
     color: black;
 }
-.main-pages:hover .sub-pages {
+.main-pages:hover .subpages {
     display: flex;
 }
 .nav-bot img {
@@ -102,4 +102,67 @@
     border-radius: 90px;
 }
 
+.menu-bar {
+    display: none;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+}
 
+@media (max-width: 900px) {
+    .nav-top {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .menu-bar {
+        display: block;
+    }
+
+    .logo-middle {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(129, 222, 129) ;
+        padding: 10px 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    .logo-middle.open {
+        display: flex;
+    }
+
+    .main-pages {
+        width: 100%;
+        position: relative;
+
+    }
+
+    .main-pages:hover .sub-pages {
+        display: none;
+    }
+
+    .subpages{
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: white;
+        padding-left: 15px;
+        box-shadow: none;
+    }
+    .subpages.open {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .nav-bot .links {
+        display: block;
+        font-weight: 500;
+        color: black;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: blue;
+    }
+}

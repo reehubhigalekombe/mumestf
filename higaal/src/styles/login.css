@@ -42,9 +42,9 @@
 }
 .login-right button {
     cursor: pointer;
-    width: 20%;
     background-color: rgb(129, 222, 129);
-    padding: 8px 16px;
+    width: 15%;
+    padding: 8px 10px;
     color: white;
 }
 .login-right button:hover {

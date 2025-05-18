@@ -41,10 +41,10 @@
 .reset form  button {
     background-color: rgb(129, 222, 129);
     cursor: pointer;
-    border: none;
+    border: 1px solid rgb(114, 112, 112);
     font-size: 12px;
-    padding: 8px;
-    width: 10%;
+padding: 8px 10px;
+    width: auto;;
     font-size: 16px;
 }
 .reset form  button:hover {
