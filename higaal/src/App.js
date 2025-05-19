@@ -15,7 +15,6 @@ import Student from "./pages/Student";
 import Contacts from "./pages/Contacts";
 import HerittageImages from "./pages/HerittageImages";
 import AuthenticationPage from "./components/AuthenticationPage";
-import PrivateRoute from "./components/PrivateRoute";
 import Public from "./pages/Public";
 import FloatingButton from "./pages/FloatingButton";
 import Testimonies from "./pages/Testimonies";
@@ -35,7 +34,7 @@ function App() {
         <Route path="/auth"  element={<AuthenticationPage/>}/>
 <Route path="/home" element={<Home/>}/>
 <Route path="/mission" element={<Mission/>}/>
-<Route path="/contacts" element={<PrivateRoute><Contacts/></PrivateRoute>}/>
+<Route path="/contacts" element={<Contacts/>} />
 <Route path="/herittage" element={<Herittage/>}/>
 <Route path="/wards" element={<Wards/>}/>
 <Route path="/latest" element={<Latest/>}/>

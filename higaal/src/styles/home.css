@@ -5,11 +5,33 @@
   flex-direction: column;
   justify-content: flex-start;
   text-align: justify;
+      margin-top: var(--navbar-height, 100px);
 }
 .home-top {
   flex: 1;
   background-color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
+}
+.home-top h1 {
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: lighter;
+  border: none;
+}
+.home-top button {
+  width: 5%;
+}
+.home-top hr {
+  width: 98%;
+  background-color: rgb(129, 222, 129);
+  height: 2px;
+  border: none;
+  margin-top: 0px;
+  border-top: px solid rgb(129, 222, 129);;
 }
 .home-bottom {
   flex: 2;
@@ -119,7 +141,6 @@ form  {
 form fieldset {
   border: 1px solid rgb(12, 12, 12);
   margin-bottom: 10px;
-  border-radius: 8px;
 }
 
 

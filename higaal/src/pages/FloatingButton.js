@@ -9,7 +9,7 @@ function FloatingButton() {
 
   return (
     <div className='floatings'>
-        <a href={`https:/wa.me/${25442106109}?text=${encodeURIComponent(defaultMessage)}`} 
+        <a href={`https:/wa.me/${254742106109}?text=${encodeURIComponent(defaultMessage)}`} 
         target='_blank' rel='noopener noreferrer' 
         ><FaWhatsapp className='floating-icon'/></a>
         <a href={`tel: ${phoneNumber}`} className='anchor'>

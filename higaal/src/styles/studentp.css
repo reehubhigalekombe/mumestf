@@ -1,6 +1,7 @@
 .profile {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: var(--navbar-height, 100px);
     
 }
 .student-form {

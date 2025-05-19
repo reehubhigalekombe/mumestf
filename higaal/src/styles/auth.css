@@ -5,6 +5,7 @@
     flex-direction: row;
     position: relative;
     color:  black;
+    margin-top: var(--navbar-height, 100px);
 }
 .auth-left {
     flex: 1;

@@ -8,6 +8,7 @@
     margin-bottom: 20px;
     margin-top: 10px;
     background-color: whitesmoke;
+    margin-top: var(--navbar-height, 100px);
 }
 
 .login-left {

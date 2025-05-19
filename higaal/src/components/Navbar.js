@@ -1,9 +1,11 @@
-import {useState} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import "../styles/navbar.css"
-import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes} from "react-icons/fa";
+import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaHome} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const navbarRef = useRef(null);
+
     const[menuOpen, setMenuOpen] = useState(false);
     const[openSubMenuIndex, setOpenSubMenuIndex]  = useState(null);
 const toggleSubMenu = (index) => {
@@ -12,8 +14,13 @@ const toggleSubMenu = (index) => {
 
     const mainPages = [
         {
-            title: "HOME",
-            link: "/home", 
+            title: (
+                <span style={{display: "flex", alignItems: "center", gap: "5px"}}>
+                    <FaHome style={{fontSize: "1rem", verticalAlign: "middle", color: "black"}} />
+                    HOME
+                </span>
+            ),
+            link: "/home",
             subpages: [
 
             ]
@@ -49,7 +56,6 @@ const toggleSubMenu = (index) => {
                 {
                     title: "Downloads", link: "/download"
                 }
-
             ]
         },
         {
@@ -57,6 +63,15 @@ const toggleSubMenu = (index) => {
             subpages: [
                 {
                     title: "Public Portal", link: "/public"
+                },
+                   {
+                    title: "Login", link: "/login"
+                },
+                   {
+                    title: "Signin", link: "/sign"
+                },
+                   {
+                    title: "Forgot Password", link: "/forgot"
                 }
             ]
         },
@@ -82,28 +97,28 @@ const toggleSubMenu = (index) => {
          {
             title: "TENDERS", link: "/tenders",
                   subpages: [
-
             ]
         },
          {
             title: "DOWNLOADS", link: "/dowloads",
                   subpages: [
-
             ]
         },
          {
             title: "CONTACTS", link: "/contacts",
                   subpages: [
-
-            ]
-        
-        },
-
+            ]  },
     ]
+    useEffect(() => {
+        const navbarHeight = navbarRef.current.offsetHeight;
+        document.documentElement.style.setProperty("--navbar-height",
+            `${navbarHeight}px`
+        );
+    }, [])
 
   return (
 
-    <div className='navbar'>
+    <div className='navbar' ref={navbarRef}>
 <div className='nav-top'>
 
     <div className='contacts'>
@@ -137,39 +152,38 @@ onClick={() => setMenuOpen(!menuOpen)}>
 <div className={`logo-middle ${menuOpen ? "open" : ""}`}>
     {mainPages.map((page, index) => (
         <div className='main-pages' key={index}  >
+
             <Link to={page.link} className='links' 
             onClick={(e) => {
                 if(page.subpages.length > 0) {
                     e.preventDefault();
                     toggleSubMenu(index)
+                }else {
+                    setMenuOpen(false)
                 }
-            } }
-            >
+            } }  >
 {page.title}
             </Link>
-
             {page.subpages.length > 0 && (
                 <div className={`subpages ${
                     openSubMenuIndex === index ? "open" : ""
-                }`}
-                >
+                }`}   >
             {page.subpages.map((sub, subIndex) => (
                 <Link
-                to={sub.link} key={subIndex}               
+                to={sub.link} key={subIndex}        
+                onClick={() => {
+                    setMenuOpen(false);
+                    setOpenSubMenuIndex(null)
+                }}       
                 >
                 {sub.title}
                 </Link>
             )
         ) }
-
-
                     </div>
             )}
-
             </div>
-
     ))}
-
 </div>
 
 

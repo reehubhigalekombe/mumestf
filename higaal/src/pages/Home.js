@@ -1,4 +1,3 @@
-import React from 'react'
 import "../styles/home.css"
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
@@ -7,12 +6,24 @@ function Home() {
   return (
     <div className='home'>
      <div className='home-top'>
-<h1>Hello World</h1>
+
 <button onClick={ () => navigate("/logout")}>Logout</button>
+<h1>
+  <span className="heri"  style={{display: "inline", backgroundColor: "rgb(129, 222, 129)", 
+  border: "rgb(129, 222, 129)",
+    padding: "0 4px", color: "white"}}>
+Testimonials
+</span>
+</h1>
+
+<hr/>
+
       </div>
 
       <div className='home-bottom'>
+          
         <div className='home-botleft'>
+  
         <form>
             <fieldset>
               <legend>
@@ -39,7 +50,7 @@ function Home() {
               <p>Mumias East is doing <strong ><em style={{color: "blue"}}>TREMENDOUSLY</em></strong> good in terms of implimenting ground breaking project!!🚀🚀🚀</p>
             </fieldset>          
           </form>
-          <Link to="/testmonies" className='home-butleft'>Click for More  &rarr;</Link>
+          <Link to="/testmonies" className='home-butleft'>Click to View All &rarr;</Link>
         </div>
         <div className='home-botright'>
           <div className='cirlces-container'>

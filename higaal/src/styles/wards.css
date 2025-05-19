@@ -8,6 +8,7 @@
     text-align: justify;
     padding: 20px;
     box-sizing: border-box;
+    margin-top: var(--navbar-height, 100px);
 }
 .wards-top {
     flex: 1;

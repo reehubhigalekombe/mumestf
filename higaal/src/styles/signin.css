@@ -8,6 +8,8 @@
     margin-bottom: 20px;
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    margin-top: var(--navbar-height, 100px);
 }
 .sign-left {
     flex: 1;

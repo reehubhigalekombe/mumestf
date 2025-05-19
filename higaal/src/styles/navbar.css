@@ -6,6 +6,10 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(129, 222, 129);
     border-radius: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 .nav-top {
     flex: 1;
@@ -43,18 +47,35 @@
 .logo-middle {
     flex: 6;
     display: flex;
+
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+.homie-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+.home-size {
+    vertical-align: middle;
+    font-size: 14px;
+}
 .logo2 {
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .logo2 button {
     background-color: rgb(79, 79, 193);
-    padding: 1px 3px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 2px 6px;
+    
 
 }
 .nav-bot .links {

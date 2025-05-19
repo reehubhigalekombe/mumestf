@@ -47,7 +47,7 @@ function Signin() {
     };
   return (
     <div className='signin-page'>
-        <div className='sign-left'>
+        <div className='sign-left' >
            
 
         </div>
