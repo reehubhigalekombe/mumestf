@@ -1,5 +1,7 @@
-
-import "../styles/contacts.css"
+import { FaInstagram, FaFacebook, FaYoutube, FaXTwitter, FaTiktok,} from "react-icons/fa6";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import {FaMapMarkerAlt} from "react-icons/fa";
+import "../styles/contacts.css" 
 
 function Contacts() {
   return (
@@ -9,7 +11,52 @@ function Contacts() {
 </div>
 
 <div className="contact-middle">
-<h1>Hello Reagan</h1>
+<div className="box" style={{backgroundColor: "transparent"}}>
+<FaMapMarkerAlt   style={{color: "red", fontSize: "50px"}}/>
+<div>
+  <h1>Location</h1>
+  <p>P . O. BOX 50106 Shianda, Kakamega</p>
+</div>
+</div>
+
+<div className="box" >
+<h1>hello Reagan</h1>
+</div>
+
+<div className="box email-staff" style={{backgroundColor: "transparent"}}>
+    <MailOutlineIcon style={{color: "red", fontSize: "50px"}}/>
+<div className="email-content">
+  <h1 className="header3">Email Address</h1>
+<p>cdfmumiaseast@ngcdf.go.ke</p>
+</div>
+  
+</div>
+
+<div className="box">
+<h1>hello Reagan</h1>
+</div>
+
+<div className="box" style={{backgroundColor: "transparent"}}>
+<h1>hello Reagan</h1>
+</div>
+
+
+<div className="box">
+<div><h1 
+style={{textAlign: 'center', fontSize: "18px", fontWeight: "lighter"}}
+>Our Social Media Platforms</h1></div>
+<div className="socia-medias">
+  <a href="https://x.com/HigalEkomb52804" target="_blank" rel="noopener  noreferrer" ><FaInstagram social-icon/></a>
+<a href="https://x.com/HigalEkomb52804" target="_blank" rel="noopener  noreferrer" ><FaFacebook/></a>
+<a href="https://x.com/HigalEkomb52804" target="_blank" rel="noopener  noreferrer" ><FaXTwitter/></a>
+<a href="https://x.com/HigalEkomb52804" target="_blank" rel="noopener  noreferrer" ><FaYoutube/></a>
+<a href="https://x.com/HigalEkomb52804" target="_blank" rel="noopener  noreferrer" ><FaTiktok/></a>
+</div>
+<div>
+
+</div>
+</div>
+
 </div>
 
 <div className="contact-bottom">

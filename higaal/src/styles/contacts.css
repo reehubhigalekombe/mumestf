@@ -3,20 +3,79 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
     margin-top: var(--navbar-height, 100px);
+  
 }
 .contact-top {
     flex: 1;
 
 }
-.contactmiddle {
+.contact-middle {
+    width: 100%;
     flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 100vh;
+     margin-left: 10px;
+     margin-right: 10px;
+    
 
 }
+.contact-middle .box {
+    height: 180px;
+    background-color: rgb(129, 222, 129);
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgb(22, 212, 22);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: lighter;
+    gap: 15px;
+ 
+}
+.socia-medias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.socia-medias a {
+    font-size: 30px;
+    color: white;
+}
+.socia-medias a:hover {
+    color: black;
+}
+.box h1 {
+    color: black;
+    font-size: 18px;
+}
+.box p {
+    color: black;
+    font-size: 20px;
+}
+
+.email-staff {
+    display: flex;
+    align-items: center;
+}
+.email-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.email-content h1, p {
+    margin: 0;
+    font-size: 22px;
+}
+
 .contact-bottom {
     flex: 1;
 

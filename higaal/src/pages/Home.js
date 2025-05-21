@@ -9,9 +9,7 @@ function Home() {
 
 <button onClick={ () => navigate("/logout")}>Logout</button>
 <h1>
-  <span className="heri"  style={{display: "inline", backgroundColor: "rgb(129, 222, 129)", 
-  border: "rgb(129, 222, 129)",
-    padding: "0 4px", color: "white"}}>
+  <span className="heri"  style={{display: "inline", backgroundColor: "rgb(129, 222, 129)", padding: "0 4px", color: "white"}}>
 Testimonials
 </span>
 </h1>
