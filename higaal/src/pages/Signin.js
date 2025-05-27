@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import "../styles/signin.css"
+import "../styles/signin.css";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2"
 
 function Signin() {
     const navigate = useNavigate();
@@ -87,12 +89,36 @@ function Signin() {
                 </div>
                 <div className='input-arrange'>
                 
-             <input type='text' 
-             name='phoneNumber' 
-             onChange={handleChange}
-             placeholder='Phone Number'
-             required
-              />
+             <PhoneInput
+             country={"ke"}
+             value={formData.phoneNumber}
+             onChange={(value) => setFormData({...formData, phoneNumber: value})}
+             inputProps={{
+              name: "phoneNumber",
+              required: true
+             }}
+             containerStyle={{
+              display: "flex",
+              marginBottom: "20px",
+              gap: "20px",
+              width: "50%"
+
+              
+             }}
+             inputStyle={{
+              height: "55px",
+              width: "100%",
+              borderRadius: "0",
+              paddingLeft: "48px"
+
+             }}
+             buttonStyle={{
+              border: 'none',
+              backgroundColor: "white",
+              borderRadius: "0",
+             }}
+
+             />
               <input type='email'
               name='email'
               onChange={handleChange}

@@ -9,76 +9,200 @@
 }
 .contact-top {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 
+}
+.contact-top1 {
+    flex: 1;
+    background-image: url("http://localhost:5000/uploads/p41.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 25px;
+}
+.contact-top1 img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+}
+.contact-top .top1 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.contact-top .top2 {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contact-top2 {
+    background-color: rgb(129, 222, 129);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+.my-dot {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+}
+.contact-top2 h2 {
+    font-size: 15px;
+}
+.contact-top2 .faa-contact {
+    color: white;
 }
 .contact-middle {
     width: 100%;
     flex: 1;
+    margin-bottom: 2px;
+    height: 100vh;
+}
+.contact-middle .contact-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    padding: 10px;
-    margin-bottom: 10px;
-    height: 100vh;
-     margin-left: 10px;
-     margin-right: 10px;
-    
-
+    justify-content: space-between;
+    padding: 0 3rem;
 }
-.contact-middle .box {
-    height: 180px;
-    background-color: rgb(129, 222, 129);
-    width: 100%;
+
+.contact-wrap .box, .box1 {
+    height: 175px;
     border-radius: 8px;
-    border: 1px solid rgb(22, 212, 22);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-weight: lighter;
-    gap: 15px;
- 
 }
-.socia-medias {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.contact-wrap .box {
+    background-color: transparent;
+    border: 1.5px solid rgb(129, 222, 129);
 }
-.socia-medias a {
-    font-size: 30px;
-    color: white;
+.contact-wrap .box1 {
+        background-color: rgb(129, 222, 129);
+        border: none;
 }
-.socia-medias a:hover {
-    color: black;
-}
-.box h1 {
-    color: black;
-    font-size: 18px;
-}
-.box p {
-    color: black;
+.contact-wrap .box h1 {
+    text-align: center;
+    margin: 4px 0;
     font-size: 20px;
+    font-weight: bold;
+}
+.contact-wrap .box  p  {
+    text-align: center;
+    font-size: 18px;
+    margin: 2px 0;
 }
 
-.email-staff {
-    display: flex;
-    align-items: center;
+.contact-wrap .box .contact-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(129, 222, 129);
 }
-.email-content {
+.contact-wrap .box1 .platforms {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: ro;
+    gap: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
 }
-.email-content h1, p {
-    margin: 0;
-    font-size: 22px;
+.contact-wrap .box1 h1 {
+    text-align: center;
+    margin: 4px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.contact-wrap .box1 p {
+    text-align: center;
+    margin: 4px 0;
+    font-size: 18px;
+    color: white;
+}
+.contact-wrap .box1 .contact-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: black;
 }
 
 .contact-bottom {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
 
+.contact-bottom1 {
+    flex: 1;
+    margin-bottom: 5px;
+    padding: 2rem;
+    margin: 0 10rem;
+}
+.contact-bot {
+    position: relative;
+    display: flex;
+    gap: 15px;
 
-
+}
+textarea:focus {
+    outline: none;
+    resize: vertical;
+}
+.contact-bottom1 h1 {
+    color: black;
+    margin-bottom: 2px;
+}
+.contact-bottom1 p{
+        color: rgb(92, 90, 90);
+}
+.contact-bottom1 button {
+    background-color: rgb(129, 222, 129);
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    width: 15%;
+    padding: 8px;
+}
+.contact-bottom1 button:hover {
+     color: white;
+    background-color: black;
+}
+.contact-bottom2 {
+    flex: 1;
+    
+}
+@media (max-width: 992px) {
+     .contact-wrap {
+        grid-template-columns: (2, 1fr);
+        padding: 0 20px;
+    }
+}
+@media (max-width: 600px) {
+     .contact-wrap {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .contact-wrap .box, .box1 {
+        height: auto;
+        padding: 20px;
+    }
+    .contact-bottom iframe{
+            height: 300px;
+    }
 }

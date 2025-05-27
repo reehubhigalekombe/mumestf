@@ -16,7 +16,7 @@ const toggleSubMenu = (index) => {
         {
             title: (
                 <span style={{display: "flex", alignItems: "center", gap: "5px"}}>
-                    <FaHome style={{fontSize: "1rem", verticalAlign: "middle", color: "black"}} />
+                    <FaHome style={{fontSize: "1rem", verticalAlign: "middle", color: "white"}} />
                     HOME
                 </span>
             ),
@@ -134,7 +134,8 @@ const toggleSubMenu = (index) => {
     <a href='mailto:elonreagnanp@gmail.com' className='footer-icons'> cdfmumiaseast@ngcdf.go.ke</a>
         </div>
         <div className='contacts'>
-    <Link to="/contacts" className='footer-icons'>    <FaMapMarkerAlt  className='icons' />  P . O. BOX 50106 Shianda, Kakamega</Link>
+    <Link to="/contacts" className='footer-icons'>    <FaMapMarkerAlt  className='icons' />
+      P . O. BOX 50106 Shianda, Kakamega</Link>
       
         </div>
 
