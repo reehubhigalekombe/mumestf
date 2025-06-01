@@ -1,0 +1,38 @@
+.my-swiper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.sliding-backg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    height: 100%;
+}
+.my-contents {
+    padding: 32px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.my-contents button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(129, 222, 129);
+    font-size: 25px;
+    padding: 0.75rem 1.5rem;
+}
+.my-contents h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.my-contents p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}

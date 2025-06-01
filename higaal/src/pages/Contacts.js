@@ -8,6 +8,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import {FaMapMarkerAlt} from "react-icons/fa";
 import CallIcon from '@mui/icons-material/Call';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
+import PhoneInput from "react-phone-input-2";
 import "../styles/contacts.css" 
 
 function Contacts() {
@@ -22,7 +23,7 @@ function Contacts() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    await axios.post("http://localhost:5000/api/contact", formData)
+    await axios.post("http://localhost:5000/api/auth/submission", formData)
     alert("Message sent Succesfully")
     setFormData({
       fullName: "",
@@ -129,14 +130,32 @@ function Contacts() {
       </div>
 
           <div className="contact-bot">
-      <input
-     type="tel"
-     name="phoneNumber"
-         value={formData.phoneNumber}
-    onChange={(e) => setFormData({...formData, phoneNumber: e.target.value})}
-     placeholder="Phone Number"
-     required
-      />
+            <PhoneInput
+            country={"ke"}
+            value={formData.phoneNumber}
+            onChange={(value) => setFormData({...formData, phoneNumber: value})}
+            inputProps={{
+              name: "phoneNumber",
+              required: true
+            }}
+            containerStyle={{
+              width: "52%",
+              gap: "20px",
+               display: "flex",
+            }}
+            inputStyle={{
+              paddingLeft: '48px',
+              height: "51px",
+              width: "100%",
+              borderRadius: "0",
+              border: "1px solid grey"
+            }}
+            buttonStyle={{
+              border: "1px solid grey",
+              backgroundColor: "white",
+              borderRadius: "0"
+            }}
+            />
       <input
       type="text"
       name="subject"
@@ -153,7 +172,7 @@ function Contacts() {
       placeholder="Write your view/concern"
             onChange={(e) => setFormData({...formData, textarea: e.target.value})}
        rows="8" ></textarea>
-      <button type="submit">Send Message</button>
+      <div><button type="submit">Send Message</button></div>
     </form>
   </div>
     <div className="contact-bottom2">

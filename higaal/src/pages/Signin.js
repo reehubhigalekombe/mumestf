@@ -100,20 +100,20 @@ function Signin() {
              containerStyle={{
               display: "flex",
               marginBottom: "20px",
-              gap: "20px",
-              width: "50%"
+              width: "49%",
+        
 
-              
              }}
              inputStyle={{
               height: "55px",
-              width: "100%",
+              width: "90%",
               borderRadius: "0",
-              paddingLeft: "48px"
+              paddingLeft: "48px",
+              border: "1px solid grey"
 
              }}
              buttonStyle={{
-              border: 'none',
+              border: '1px solid grey',
               backgroundColor: "white",
               borderRadius: "0",
              }}
