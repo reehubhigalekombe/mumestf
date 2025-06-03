@@ -4,11 +4,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Home from "./pages/Home";
 import Herittage from "./pages/Herittage";
 import Wards from "./pages/Wards";
 import Latest from "./pages/Latest"
-import Mission from "./pages/Mission"
+import Mission from "./pages/Mission";
+import Tenders from "./pages/Tenders"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import Student from "./pages/Student";
@@ -36,6 +40,7 @@ function App() {
 <Route path="/mission" element={<Mission/>}/>
 <Route path="/contacts" element={<Contacts/>} />
 <Route path="/herittage" element={<Herittage/>}/>
+<Route path="/tenders" element = {<Tenders/>} />
 <Route path="/wards" element={<Wards/>}/>
 <Route path="/latest" element={<Latest/>}/>
 <Route path="/sign" element={<Signin/>}/>

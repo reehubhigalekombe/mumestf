@@ -1,0 +1,6 @@
+.tender {
+    height: auto;
+    width: 100%;
+    color: black;
+    margin-top: var(--navbar-height, 100px);
+}

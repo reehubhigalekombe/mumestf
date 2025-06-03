@@ -55,16 +55,33 @@ margin-bottom: 10px;
   gap: 3px;
   justify-content: space-between;
   margin: 0 3rem;
-
 }
 .home-wrap .home-box {
   background-color: rgb(129, 222, 129);
      height: 160px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+     padding: 10px;
+} 
+.home-box .forward  {
+  color: rgb(129, 222, 129);
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+cursor: pointer;
+  border: 1px solid white;
+  transition: transform 0.5s ease-in-out;
 }
+.home-box .forward:hover {
+  background-color: black;
+  color: white;
+  border: none;
+
+}
+.home-wrap .home-box h4 {
+      color: white;
+
+}
+
 .home-top2b {
   flex: 1;
   width: 100%;
@@ -80,9 +97,13 @@ margin-bottom: 10px;
 .top-wrap .top-middle1 {
   width: 100%;
   height: 160px;
-  background-color: aquamarine;
+  background-color: rgb(129, 222, 129); ;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
+
 .top-wrap .top-middle2 {
   width: 100%;
   height: 50px;
@@ -93,7 +114,16 @@ margin-bottom: 10px;
   text-align: justify;
 
 }
-
+.top-middle1 button {
+  background-color: white;
+  width: 55%;
+  cursor: pointer;
+  border: none;
+  border-radius: 98px;
+}
+.top-middle1 button:hover {
+  background-color: rgb(241, 186, 83);
+}
 .home-bottom {
   display: flex;
   flex-direction: column;
@@ -116,7 +146,7 @@ margin-bottom: 10px;
     height: 450px;
     display: flex;
     flex-direction: column;
-    background-color: white;
+  
     margin-bottom: 10px;
         border-radius: 8px;
 }
@@ -192,6 +222,7 @@ margin-bottom: 10px;
   flex-direction: row;
   height: 90vh;
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .home-bottom2l {
   flex: 1;
@@ -235,11 +266,17 @@ text-align: center;
   border-radius: 8px;
   padding: 10px;
   overflow: hidden;
-  background-color: rgba(12, 12, 12, 0.5);
+  background-color: rgba(6, 6, 6, 0.5);
   color: white;
 }
-.side ul li{
-  gap: 20px;
+.side ul {
+  display: flex;
+  flex-direction: column;
+
+}
+.side ul li {
+  font-size: 30px;
+  font-weight: bold;
 }
 .circles-container  {
   text-align: center;
@@ -299,43 +336,11 @@ text-align: center;
   padding: 4px 8px;
   border-radius: 8px;
 }
-form  {
-  width: 100%;
-  background-color: white;
-}
-form fieldset {
-  border: 1px solid rgb(12, 12, 12);
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-
- form img {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  margin-bottom: 0px;
-}
-
-form h1 {
-  color: red;
-  font-weight: lighter;
-  font-size: 18px;
-  margin-top: 0 ;
-  margin-bottom: 0px;
-}
-form p {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0px;
-  text-align: justify;
-}
 .home-bottom button {
   width: 10%;
   border: 1px solid  green;;
   background-color: transparent;
 }
-
 @media (max-width: 768px) {
  .home-bottom2r .bottom-right2 {
   grid-template-columns: 1fr;
