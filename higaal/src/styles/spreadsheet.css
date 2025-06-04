@@ -1,0 +1,25 @@
+.spreadsheet {
+    width: 100%;
+    height: auto;
+    margin: 16px;
+}
+.spreadsheet button {
+    width: 14%;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: silver;
+    margin-top: 16px;
+}
+.spreadsheet table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    table-layout: fixed;
+}
+.spreadsheet table th {
+    text-align: justify;
+}

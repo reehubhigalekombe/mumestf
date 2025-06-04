@@ -54,8 +54,8 @@ function Signin() {
 
         </div>
         <div className='sign-right'>
-        <form onSubmit={handleSubmit} className='sign-form'>
-            <h1>Create Account!</h1>
+        <form onSubmit={handleSubmit} >
+            <h1 style={{textAlign: "justify"}}>Create Account!</h1>
             <p>Kindly enter your names exacatly as displayed on you Natioanal ID/Birth Certificate</p>
             {error && <p className='error'>{error}</p>}
             <div className='input-arrange'>
@@ -167,7 +167,9 @@ function Signin() {
                 </div>
 
             <div className='input-arrange'>
-            <button type='submit'>Sign Up</button>
+            <button type='submit'
+            
+            >Sign Up</button>
             </div>
         </form>
       

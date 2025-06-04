@@ -1,7 +1,7 @@
 import "../styles/home.css";
 import { Link } from 'react-router-dom';
 import CampaignIcon from '@mui/icons-material/Campaign';
-import { FaArrowAltCircleRight, FaQuestionCircle } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -172,7 +172,7 @@ Public Service Commission Chairperson Amb. Anthony Muchiri has called upon autho
 style={{
   color: "white",
 textDecoration: "none"
-}}>VIEW MORE &#9654;</Link></button>  </div>
+}}>VIEW MORE <FaArrowAltCircleRight/></Link></button>  </div>
         </div>
  <div className="home-bottom2">
        <div className="home-bottom2l">

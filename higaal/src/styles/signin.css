@@ -19,8 +19,11 @@
     clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
 
 }
-.sign-right {
+.sign-right form{
     flex: 1;
+    gap: 4px;
+
+ 
 }
 .sign-right h1 {
     color: black;
@@ -75,10 +78,10 @@
     transition: border-color 0.5s ease-in-out;
 
 }
-.input-arrange input:focus  {
+.input-arrange form  input:focus  {
     outline: none;
 }
-.sign-right button {
+.sign-right form button {
     cursor: pointer;
     background-color: rgb(129, 222, 129);
     padding: 8px 16px;

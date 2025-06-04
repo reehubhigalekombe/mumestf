@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import "../styles/tender.css";
 import { FaSearch } from 'react-icons/fa';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Link } from 'react-router-dom';
+import SpreadSheet from "../pages/SpreadSheet"
 function Tenders() {
     const[query, setQuery] = useState("");
     const handleSearch = (e) => {
@@ -20,7 +21,7 @@ function Tenders() {
         style={{
             position: "absolute",
             top: '50%',
-            right: "100px",
+            right: "180px",
             color: "grey",
             transform: "translateY(-50%",
             cursor: "pointer",
@@ -43,11 +44,11 @@ function Tenders() {
     </form>
 </div>
   <div className='tender-buttons'>
-    <button><Link style={{color: "white", textDecoration: "none"}}>Eligibility </Link></button>
-    <button><Link style={{color: "white", textDecoration: "none"}}>TOR</Link></button>
-    <button><Link style={{color: "white", textDecoration: "none"}}>How to Apply</Link></button>
-    <button><Link style={{color: "white", textDecoration: "none"}}>Application Form</Link></button>
-    <button><Link style={{color: "white", textDecoration: "none"}}>Application Status</Link></button>
+    <button><Link style={{color: "black", textDecoration: "none"}}>Eligibility </Link></button>
+    <button><Link style={{color: "black", textDecoration: "none"}}>TOR</Link></button>
+    <button><Link style={{color: "black", textDecoration: "none"}}>How to Apply</Link></button>
+    <button><Link style={{color: "black", textDecoration: "none"}}>Application Form</Link></button>
+    <button><Link style={{color: "black", textDecoration: "none"}}>Application Status</Link></button>
         </div>
 </div>
 
@@ -84,15 +85,16 @@ style={{
     style={{
         width: "100%",
         padding: "4px",
-        fontSize: "0.9rem"
+        fontSize: "0.9rem",
+        borderRadius: "8px"
 
     }}
     />
 
 </form>
 </div>
-<div className='spreadsheet'>
-
+<div className='table-download'>
+<SpreadSheet/>
 </div>
 
 </div>
