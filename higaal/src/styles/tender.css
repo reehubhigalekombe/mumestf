@@ -2,5 +2,105 @@
     height: auto;
     width: 100%;
     color: black;
+    display: flex;
+    flex-direction: column;
     margin-top: var(--navbar-height, 100px);
+    background-color: rgb(218, 212, 212);
+}
+.tender .tender1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-image: url("http://localhost:5000/uploads/tender3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+.tender-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 0 3rem;
+    margin-bottom: 4rem;
+}
+.tender-buttons button {
+    width: 12%;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    padding: 4px 5px
+}
+.tender-buttons button:hover {
+    background-color: rgb(129, 222, 129);
+}
+.searchbar  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0  3rem;
+    margin-top: 4rem;
+}
+form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;        
+}
+input {
+    width: 100%;
+    border: 1px solid rgb(112, 110, 110);
+    font-size: 20px;
+    outline: none;
+    border-radius: 12px;
+}
+.tender .tender2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+    margin-top: 1rem;
+    background-color: white;
+}
+.tender-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px;
+    height: 30px;
+    margin: 0 0.5;
+}
+.tender-table {
+    display: flex;
+     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+     margin: 0 1.5rem;
+     height: 40px;
+     margin-top: 10px;
+       margin-bottom: 10px;
+       gap: 0.3rem;
+}
+.tender-table button {
+    width: 13%;
+    background-color: silver;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+}
+.tender-table form {
+    display: flex;
+    align-items: row;
+    justify-content: flex-start;
+    align-items: center;
+
 }
