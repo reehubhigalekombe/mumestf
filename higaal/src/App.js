@@ -28,6 +28,12 @@ import Logout from "./pages/Logout";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPass from "./pages/ResetPass";
 import SpreadSheet from "./pages/SpreadSheet";
+import Status from "./pages/Status";
+import Application from "./pages/Application";
+import Eligibility from "./pages/Eligibility";
+import TenderStatus from "./pages/TenderStatus";
+import TenderForm from "./pages/TenderForm";
+
 
 function App() {
   return (
@@ -49,12 +55,16 @@ function App() {
 <Route  path="/logout"  element={<Logout/>}  />
 <Route path="/testimonies" element={<Testimonies/>}/>
 <Route path="/herri" element={<HerittageImages/>}/>
-<Route path="/student" element={<Student/>}/>
+<Route path="/portal" element={<Student/>}/>
 <Route path="/spreadsheet" element={<SpreadSheet/>} />
 <Route path="/public" element={<Public/>}/>
 <Route path="/forgot" element={<ForgotPassword/>} />
 <Route path="/reset-password/:token" element={<ResetPass/>} />
-
+<Route path="/status" element={<Status/>}/>
+<Route path="/application" element={<Application/>}/>
+<Route path="/eligibility" element={<Eligibility/>} />
+<Route path="/tenderstatus" element={<TenderStatus/>} />
+<Route path="tform" element={<TenderForm/>} />
       </Routes>
       <FloatingButton/>
       <Footer/>

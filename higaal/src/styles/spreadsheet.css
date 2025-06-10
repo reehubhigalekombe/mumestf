@@ -8,11 +8,12 @@
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background-color: silver;
+    background-color: white;
     margin-top: 16px;
+}
+.spreadsheet button:hover{
+    background-color: rgb(129, 222, 129);
+
 }
 .spreadsheet table {
     border-collapse: collapse;
@@ -22,4 +23,6 @@
 }
 .spreadsheet table th {
     text-align: justify;
+    background-color: rgb(181, 227, 181);
+    font-size: 1rem;
 }

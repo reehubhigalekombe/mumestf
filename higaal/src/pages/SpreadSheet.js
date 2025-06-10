@@ -35,7 +35,16 @@ function SpreadSheet() {
               close: "Closes in 2 Months",
               addendum: 'None',
               status: "Active"},
-
+                  {id: "YEDFB /OS/001/2025-2027", 
+            number: "MECDF /OT/001/2025-2027"
+             ,descr: "ST. PETERS KHABAKAYA SECONDARY SCHOOL (5 CLASSROOMS, 4 PIT LATRINE AND BOREHOLE PROJECTS",
+             proc: "Mumias East NG-CDF",
+              proc1: "Open Tender", 
+              proc2: 'Road Works',
+              date: "1st June, 2025",
+              close: "Closes in 2 Months",
+              addendum: 'None',
+              status: "Active"}
     ];
     const headers = [
         
@@ -51,7 +60,7 @@ function SpreadSheet() {
     ]
   return (
     <div className='spreadsheet'>
- <table border="0.5" cellPadding="5">
+ <table border="1" cellPadding="5">
      <thead>
     <tr>
         <th>Tender No.</th>
@@ -90,7 +99,10 @@ function SpreadSheet() {
     filename={"tender.csv"}
     style={{
         textDecoration: "none",
-        color: "black"
+        color: "black",
+        display:"inline-flex",
+        alignItems: "center",
+        gap: "4px"
     }}
     
     >

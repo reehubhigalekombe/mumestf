@@ -1,25 +1,64 @@
 import "../styles/home.css";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { FaSearch } from "react-icons/fa";
+
 
 function Home() {
+  const[query, setQuery] = useState("")
+  const handleSearch = (e) => {
+    e.preventDefault()
+    console.log("Serch for our Services", query)
+  }
   return (
     <div className='home'>
      <div className='home-top'>
       <div className="home-top1">
        <div className="home-top1l">
-        <h1>Hellow World</h1>
        </div>
-
         <div className="home-top1r">
-      
-
+          <div className="right1">
+           <form onSubmit={handleSearch}>
+          <input 
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for our Services........."
+          />
+          <FaSearch 
+             style={{position: "absolute", top: '24.5%', right: "22px", color: "grey",  transform: "translate(-50%",  cursor: "pointer",  fontSize: "16px" }}
+          />
+         </form>
+         </div>
+          <div className="circles">
+<div className="circle">
+  <div><Link to="/eligibility" style={{textDecoration: "none", color:"white"}}>Bursaries</Link></div>
+</div>
+<div className="divide"></div>
+<div className="circle1">
+<div><Link to="/tenders" style={{textDecoration: "none", color:"white"}}>Tenders</Link></div>
+</div>
+<div className="divide"></div>
+<div className="circle2">
+<div><Link to="/latest" style={{textDecoration: "none", color:"white"}}>Latest</Link></div>
+</div>
+          </div>
+         
+         <div className="right2">
+<h2>Helping you to find </h2>
+<h1>Access to our NG-CDF Services for a trasformative Mumias East  and its Jurisdiction</h1>
+          </div>
+         <div className="right3">
+          <button><Link to="/sign"  style={{textDecoration: "none", color:"white"}}>Signin</Link></button>
+            <button><Link to="/login"  style={{textDecoration: "none", color:"white"}}>Login</Link></button>
+       <button><Link to="/login"  style={{textDecoration: "none", color:"white"}}>Subscribe</Link></button>
+         </div>
        </div>
-
       </div>
     <div className="home-top2">
       <div className="home-top2t">
@@ -77,9 +116,7 @@ function Home() {
           justifyContent: "flex-end",
           alignItems: "flex-end",
          }}>
-          <Link>
-         <FaArrowAltCircleRight className="forward"  />
-         </Link>
+          <Link><FaArrowAltCircleRight className="forward"  /></Link>
          </div>
         </div>
 </div>
@@ -114,7 +151,7 @@ style={{
   paddingRight: "20px"
 }}
 >
-<button> <Link to="/home" style={{
+<button> <Link to="/eligibility" style={{
   color: "black",
   textDecoration: "none",
   fontWeight: "lighter"

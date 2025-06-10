@@ -11,51 +11,31 @@ function Navbar() {
 const toggleSubMenu = (index) => {
     setOpenSubMenuIndex(openSubMenuIndex ===  index ? null : index)
 };
-
     const mainPages = [
-        {
-            title: (
-                <span style={{display: "flex", alignItems: "center", gap: "5px"}}>
-                    <FaHome style={{fontSize: "1rem", verticalAlign: "middle", color: "white"}} />
-                    HOME
-                </span>
-            ),
+        {title: (<span style={{display: "flex", alignItems: "center", gap: "5px"}}>
+                    <FaHome style={{fontSize: "1rem", verticalAlign: "middle", color: "white"}} /> HOME</span>
+         ),
             link: "/home",
             subpages: [
-
-            ]
-        },
+            ] },
         {title: "ABOUT",
             link: "/herittage",
             subpages: [
+                {title: "Herittage", link: "/herittage"},
+
                 {
-                    title: "Herittage", link: "/herittage"
-                },
-                {
-                    title: "Wards", link: "/wards"
-                },
-                {
-                    title: "Latest News", link: "/latest"
-                }
-            ],
-        },
-        {
-            title: "BURSARIES", link: "/student",
+                    title: "Wards", link: "/wards"},
+                {title: "Latest News", link: "/latest"}
+            ]},
+        {title: "BURSARIES", link: "/student",
             subpages: [
+                {  title: "Eligibility & Application", link: "/eligibility"  },
                 {
-                    title: "Eligibility & Application", link: "/welcome"
+                    title: "Students Portal", link: "/portal"
+                }, 
+                {
+                    title: "Bussary Application Status", link: "/status"
                 },
-                {
-                    title: "Students Portal", link: "/student"
-                }, {
-                    title: "Application Form", link: "/welcome"
-                },
-                {
-                    title: "Status Tracking", link: "/welcome"
-                },
-                {
-                    title: "Downloads", link: "/download"
-                }
             ]
         },
         {
@@ -97,6 +77,7 @@ const toggleSubMenu = (index) => {
          {
             title: "TENDERS", link: "/tenders",
                   subpages: [
+                    
             ]
         },
          {
@@ -115,14 +96,10 @@ const toggleSubMenu = (index) => {
             `${navbarHeight}px`
         );
     }, [])
-
   return (
-
     <div className='navbar' ref={navbarRef}>
 <div className='nav-top'>
-
     <div className='contacts'>
-  
     Helpline: 
     <FaPhoneAlt className='icons'/>
     <a href='tel:+254742106109' className='footer-icons'>+254742106109</a>/
@@ -143,6 +120,7 @@ const toggleSubMenu = (index) => {
 <div className='nav-bot'>
 <div className='logo1'>
 <img src="http://localhost:5000/uploads/cgd2.jpeg" alt='logo'/>
+<button>Admin</button> 
 </div>
 
 <div className='menu-bar'
@@ -179,23 +157,17 @@ onClick={() => setMenuOpen(!menuOpen)}>
                 >
                 {sub.title}
                 </Link>
-            )
-        ) }
+            ) ) }
                     </div>
             )}
             </div>
     ))}
 </div>
-
-
 <div className='logo2'>
-<button>Admin</button> 
+<button>Logout</button> 
 <img src="http://localhost:5000/uploads/cdf1.jpeg" alt='logo'/>
 </div>
-
 </div>
     </div>
-  )
-}
-
+  )}
 export default Navbar

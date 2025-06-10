@@ -1,0 +1,55 @@
+.status {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    margin: 16px;
+    flex-direction: column;
+    margin-top: var(--navbar-height, 100px);
+    background-color: silver;
+    gap: 10px;
+}
+.status .status-top {
+    background-color: white;
+    margin: 0 2.5rem;
+    height: 40px;
+    margin-top: 1.5rem;
+    display: flex;align-items: center;
+    padding-left: 4px;
+
+}
+.status-bottom {
+    height: auto;
+    margin: 0 2.5rem;
+}
+.status-bottom table{
+    background-color: white;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.status-bottom tr td{
+    height: 40px;
+    text-align: center;
+    width: auto;
+
+}
+.status-bottom table th {
+    text-align: justify;
+    background-color: rgb(181, 227, 181);
+    font-size: 1rem;
+}
+.status-bottom button {
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+}
+.status-bottom button:hover{
+    background-color: rgb(129, 222, 129);
+
+}

@@ -1,0 +1,55 @@
+.eligibility {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: var(--navbar-height, 100px);
+}
+.eligibility .eligibility1 {
+    flex: 1;
+    display: flex;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 1rem;
+}
+.eligibility1 h1 {
+    font-size: 1.9rem;
+    text-align: center;
+
+}
+.eligibility1 p {
+    font-size: 1.4rem;
+    color: rgb(114, 113, 113);
+}
+.eligibility2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6rem;
+    color: rgb(130, 128, 128);
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+.eligibility3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6rem;
+}
+.eligibility3 ul li{
+    padding: 10px;
+}
+.eligibility3 button {
+    width: 14%;
+    font-size: 18px;
+    background-color:  rgb(129, 222, 129);;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.eligibility3 button:hover {
+background-color: black;
+}
+

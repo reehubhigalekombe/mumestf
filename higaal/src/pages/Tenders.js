@@ -32,7 +32,7 @@ function Tenders() {
         type='text'
         value={query}
         placeholder='Search for Tender (name, tender id, ocid, PE: )'
-        ocChange = {
+        onChange = {
             (e) => setQuery(e.target.value)          
         }
         style={{
@@ -47,8 +47,8 @@ function Tenders() {
     <button><Link style={{color: "black", textDecoration: "none"}}>Eligibility </Link></button>
     <button><Link style={{color: "black", textDecoration: "none"}}>TOR</Link></button>
     <button><Link style={{color: "black", textDecoration: "none"}}>How to Apply</Link></button>
-    <button><Link style={{color: "black", textDecoration: "none"}}>Application Form</Link></button>
-    <button><Link style={{color: "black", textDecoration: "none"}}>Application Status</Link></button>
+    <button><Link to="/tform" style={{color: "black", textDecoration: "none"}}>Application Form</Link></button>
+    <button><Link to="/tenderstatus" style={{color: "black", textDecoration: "none"}}>Application Status</Link></button>
         </div>
 </div>
 
@@ -87,10 +87,8 @@ style={{
         padding: "4px",
         fontSize: "0.9rem",
         borderRadius: "8px"
-
     }}
     />
-
 </form>
 </div>
 <div className='table-download'>

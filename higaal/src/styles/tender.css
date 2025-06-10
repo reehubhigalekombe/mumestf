@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     margin-top: var(--navbar-height, 100px);
-    background-color: rgb(218, 212, 212);
+    background-color: silver;
+    margin-bottom: opx;
 }
 .tender .tender1 {
     flex: 1;
@@ -24,19 +25,20 @@
     flex-direction: row;
     gap: 20px;
     justify-content: space-around;
-    margin: 0 3rem;
+    margin: 0 4rem;
     margin-bottom: 4rem;
 }
 .tender-buttons button {
-    width: 12%;
+    width: 13%;
     cursor: pointer;
     border: none;
-    background-color: rgb(129, 222, 129);
-    padding: 4px 5px;
+    background-color: white;
+    padding: 9px;
     color: black;
+    font-size: 14px;
 }
 .tender-buttons button:hover {
-    background-color: silver;
+    background-color: rgb(129, 222, 129);
     color: white;
 
 }
@@ -94,10 +96,13 @@
 }
 .tender-table button {
     width: 13%;
-    background-color: silver;
+    background-color: white;
     display: inline-flex;
     align-items: center;
-    padding: 4px;
+    padding: 8px;
+}
+.tender-table button:hover  {
+        background-color: rgb(129, 222, 129);
 }
 .tender-table form {
     display: flex;
