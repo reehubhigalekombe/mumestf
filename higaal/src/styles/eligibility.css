@@ -48,6 +48,7 @@
     color: white;
     cursor: pointer;
     border: none;
+    padding: 8px;
 }
 .eligibility3 button:hover {
 background-color: black;

@@ -75,13 +75,14 @@
 
 }
 
-.logo2 button {
+.logo2 button, .logo1 button {
     background-color: rgb(129, 222, 129);
     cursor: pointer;
     border: 2px solid white;
     color: black;
     width: 45%;
     padding: 4px;
+    border-radius: 8px;
 }
 .logo2 button:hover {
     background-color: white;
@@ -91,14 +92,7 @@
     background-color: white;
     
 }
-.logo1 button {
-    cursor: pointer;
-    background-color: rgb(129, 222, 129);
-    border: 2px solid white;
-    color: black;
-    width: 35%;
-    padding: 4px;
-}
+
 .nav-bot .links {
     text-decoration: none;
     padding: 10px;

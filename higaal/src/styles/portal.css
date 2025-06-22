@@ -49,8 +49,11 @@
 .portal-bottom2 button {
     width: 13%;
     cursor: pointer;
+    padding: 8px;
     background-color: rgb(129, 222, 129);
     border: none;
+    border-radius: 8px;
+
 }
 .portal-bottom2 button:hover {
     background-color: black;

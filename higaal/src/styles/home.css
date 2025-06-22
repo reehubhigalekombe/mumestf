@@ -22,7 +22,7 @@
   flex-direction: row;
 }
 .home-top1l {
-  flex: 1;
+  flex: 0.4;
   background-image: url("http://localhost:5000/uploads/p4.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -32,7 +32,7 @@
 }
 
 .home-top1r {
-  flex: 1;
+  flex: 0.6;
   display: flex;
   height: auto;
   flex-direction: column;
@@ -89,8 +89,8 @@
  
  }
 .home-top1r .circles  .circle2 {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: red;
   color: white;
   margin-bottom: 10px;
@@ -109,10 +109,12 @@
   margin-top: 1rem;
 }
 .home-top1r .right1 form input {
-  width: 400px;
-  border-radius: 8px;
-  height: 16px;
-  border: 1px solid grey;
+  width: 500px;
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: black;
 }
 .home-top1r .right2 h1 {
   font-weight: 100;
@@ -140,6 +142,7 @@
     border-radius: 8px;
     color: white;
     border: none;
+    padding: 8px;
 }
 
  .home-top1r .right3 button:hover {

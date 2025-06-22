@@ -31,21 +31,21 @@ function Home() {
           placeholder="Search for our Services........."
           />
           <FaSearch 
-             style={{position: "absolute", top: '24.5%', right: "22px", color: "grey",  transform: "translate(-50%",  cursor: "pointer",  fontSize: "16px" }}
+             style={{position: "absolute", top: '23.2%', right: "22px", color: "grey",  transform: "translate(-50%",  cursor: "pointer",  fontSize: "16px" }}
           />
          </form>
          </div>
           <div className="circles">
 <div className="circle">
-  <div><Link to="/eligibility" style={{textDecoration: "none", color:"white"}}>Bursaries</Link></div>
+  <div><Link to="/eligibility" style={{textDecoration: "none", color:"white", fontSize: "15px"}}>Bursaries</Link></div>
 </div>
 <div className="divide"></div>
 <div className="circle1">
-<div><Link to="/tenders" style={{textDecoration: "none", color:"white"}}>Tenders</Link></div>
+<div><Link to="/tenders" style={{textDecoration: "none", color:"white", fontSize: "15px"}}>Tenders</Link></div>
 </div>
 <div className="divide"></div>
 <div className="circle2">
-<div><Link to="/latest" style={{textDecoration: "none", color:"white"}}>Latest</Link></div>
+<div><Link to="/latest" style={{textDecoration: "none", color:"white",  fontSize: "15px"}}>Latest</Link></div>
 </div>
           </div>
          

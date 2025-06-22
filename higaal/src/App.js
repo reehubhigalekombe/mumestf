@@ -23,7 +23,6 @@ import Public from "./pages/Public";
 import FloatingButton from "./pages/FloatingButton";
 import Testimonies from "./pages/Testimonies";
 import Signin from "./pages/Signin";
-import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPass from "./pages/ResetPass";
@@ -33,6 +32,7 @@ import Application from "./pages/Application";
 import Eligibility from "./pages/Eligibility";
 import TenderStatus from "./pages/TenderStatus";
 import TenderForm from "./pages/TenderForm";
+import Downloads from "./pages/Downloads";
 
 
 function App() {
@@ -51,7 +51,6 @@ function App() {
 <Route path="/wards" element={<Wards/>}/>
 <Route path="/latest" element={<Latest/>}/>
 <Route path="/sign" element={<Signin/>}/>
-<Route path="/login" element={<Login/>} />
 <Route  path="/logout"  element={<Logout/>}  />
 <Route path="/testimonies" element={<Testimonies/>}/>
 <Route path="/herri" element={<HerittageImages/>}/>
@@ -65,6 +64,7 @@ function App() {
 <Route path="/eligibility" element={<Eligibility/>} />
 <Route path="/tenderstatus" element={<TenderStatus/>} />
 <Route path="tform" element={<TenderForm/>} />
+<Route path="/downloads" element={<Downloads/>} />
       </Routes>
       <FloatingButton/>
       <Footer/>

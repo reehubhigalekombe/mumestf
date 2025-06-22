@@ -67,10 +67,11 @@ function Tenders() {
 </div>
 <div className='tender-table'>
 
-<button 
+<button style={{}}
 ><Link to="/home" style={{display: "flex",
 alignItems: "center", gap: "4px",
-     textDecoration: "none", color: "black", fontSize: "14px"}}><DownloadIcon/> Download Excel</Link></button>
+     textDecoration: "none", color: "black", fontSize: "14px"}}><DownloadIcon/> Download Excel</Link>
+     </button>
 <form onSubmit={handleSearch}
 style={{
     display: 'flex', flexDirection: "row", justifyContent: "flex-start", width: "100%", 

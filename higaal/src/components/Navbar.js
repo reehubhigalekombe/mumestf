@@ -44,12 +44,7 @@ const toggleSubMenu = (index) => {
                 {
                     title: "Public Portal", link: "/public"
                 },
-                   {
-                    title: "Login", link: "/login"
-                },
-                   {
-                    title: "Signin", link: "/sign"
-                },
+                  
                    {
                     title: "Forgot Password", link: "/forgot"
                 }
@@ -81,8 +76,8 @@ const toggleSubMenu = (index) => {
             ]
         },
          {
-            title: "DOWNLOADS", link: "/dowloads",
-                  subpages: [
+            title: "DOWNLOADS", link: "/downloads",
+                  subpages: [ 
             ]
         },
          {

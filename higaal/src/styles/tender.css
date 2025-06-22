@@ -34,6 +34,8 @@
     border: none;
     background-color: white;
     padding: 9px;
+    border-radius: 8px;
+    border: none;
     color: black;
     font-size: 14px;
 }
@@ -100,6 +102,8 @@
     display: inline-flex;
     align-items: center;
     padding: 8px;
+    border-radius: 8px;
+    border: none;
 }
 .tender-table button:hover  {
         background-color: rgb(129, 222, 129);

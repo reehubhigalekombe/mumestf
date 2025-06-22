@@ -92,7 +92,7 @@ function SpreadSheet() {
 )) }
   </tbody>
  </table>
- <button>
+ <button style={{width: "10%", padding:"8px"}}>
     <CSVLink 
     data={TenderInformation}
     headers={headers}
@@ -107,7 +107,7 @@ function SpreadSheet() {
     
     >
         <DownloadIcon/>
-        Download Tender
+        Download
     </CSVLink>
  </button>
     </div>

@@ -1,130 +1,144 @@
-.auth-page {
+.auth {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     color:  black;
     margin-top: var(--navbar-height, 100px);
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 .auth-left {
-    flex: 1;
-    background-image: url("http://localhost:5000/uploads/pt1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
+ display: flex;
+    flex-direction: column;
+    gap: 8px;
+
 }
-.mylabels {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 30px auto;
+.leftTop {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+  color: black;
+  margin-bottom: 2px;
+
 }
-.hex {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border: 0.5px solid black;
+.leftTop img {
+  width: 57px;
+  height: 57px;
+
+}
+.verticalLine {
+  height: 60px;
+  width: 2px;
+    background-color: black;
+  margin: 0;
+}
+
+
+.leftMiddle {
+  flex: 1;
+text-align: center;
+margin-top: 0px;
+}
+
+.leftMiddle h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+
+}
+.leftMiddle .hori-divide {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin:  20px 0 ;
+}
+.hori-divide .myLine {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: black;
+
+}
+.leftMiddle h2 {
+color: rgb(142, 141, 141);
+  font-size: 1rem;
+  margin-top: 0px;
+}
+.leftBottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4rem;
+}
+.leftBottom form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.leftBottom form input  {
+  width: 90%;
+  height: 38px;
+  font-size: 18px;
+  color: black;
+}
+.leftBottom form label {
+font-size: 18px;
+color: rgb(108, 107, 107);
+}
+.auth-right {
+  background-image: url("http://localhost:5000/uploads/pk12.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.remember {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+  
+ .leftBottom  form .remember input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.remember .forgot-pass {
   text-decoration: none;
-
-clip-path: polygon(
-  50% 0%,
-  100% 25%,
-  100% 75%,
-  50% 100%,
-  0% 75%,
-  0% 25%
-);
-position: absolute;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: transform 0.5s;
-color: rgb(7, 7, 7);
-font-weight: lighter;
-border-radius: 10px;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+  margin-left: auto;
 }
-.center {
-  background-color: white;
-  color: rgb(7, 7, 7);
-}
-.auth-right{
-
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: end;
-    padding: 16px;
-
-}
-.auth-right h1 {
-  font-size: 35px;
-}
-@media (max-width:768px ){
-    .auth-page{
-        flex-direction: column;
-    }
-    .auth-left {
-        width: 100%;
-        height: 50vh;
-        clip-path: none;
-        flex: none;
-
-    }
-    .auth-left {
-        background-color: #e6ebee;
-    }
+.remember .forgot-pass:hover {
+  color: black;
 }
 
-  
-.auth-form {
-    max-width: 400px;
-    margin: 10px auto;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 0.625rem;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: whitesmoke;
-    color: black;
-  }
-  .auth-form h2 {
-    color: black;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  input {
-    padding: 0.625rem;
-    font-size: 1rem;
-  }
-  
-  button {
-    width: 40%;
-    padding: 0.625rem;
-    font-size: 1rem;
-    background-color: rgb(84, 84, 228);
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 0.45rem;
-  }
-  
-  .toggle {
-    margin-top: 0.625rem;
-  }
-  
-  .link {
-    color: #000;
-    cursor: pointer;
-    font-weight: lighter;
-    margin-left: 5px;
-  }
-  
 
+.leftBottom form button {
+  width: 13%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(129, 222, 129);
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
+.auth form button:hover{
+  background-color: black;
+  color: white;
+}
