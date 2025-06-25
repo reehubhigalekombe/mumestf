@@ -151,7 +151,7 @@ style={{
   paddingRight: "20px"
 }}
 >
-<button> <Link to="/eligibility" style={{
+<button style={{padding: "8px", fontWeight: "bold"}}> <Link to="/eligibility" style={{
   color: "black",
   textDecoration: "none",
   fontWeight: "lighter"

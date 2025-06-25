@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import  {useState, useEffect} from 'react';
 import axios from 'axios';
 import "../styles/login.css"
 import { Link, useNavigate } from 'react-router-dom';
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff"
-
 function Login() {
   const[showPassword, setShowPassword] = useState(false);
     const[email, setEmail] = useState("");
@@ -14,7 +13,7 @@ function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        try {
+        try { 
             const res = await axios.post("http://localhost:5000/api/auth/login", {
                 email, 
                 password,

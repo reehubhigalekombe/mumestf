@@ -67,7 +67,7 @@ function Tenders() {
 </div>
 <div className='tender-table'>
 
-<button style={{}}
+<button
 ><Link to="/home" style={{display: "flex",
 alignItems: "center", gap: "4px",
      textDecoration: "none", color: "black", fontSize: "14px"}}><DownloadIcon/> Download Excel</Link>

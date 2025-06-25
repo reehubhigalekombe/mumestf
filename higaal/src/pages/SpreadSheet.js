@@ -92,7 +92,7 @@ function SpreadSheet() {
 )) }
   </tbody>
  </table>
- <button style={{width: "10%", padding:"8px"}}>
+ <button style={{width: "%", padding:"8px"}}>
     <CSVLink 
     data={TenderInformation}
     headers={headers}

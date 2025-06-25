@@ -40,7 +40,7 @@ function Signin() {
             const res = await axios.post("http://localhost:5000/api/auth/signup", formData)
             console.log(res.data);
             alert("Registration was Successful!")
-            navigate("/login")
+            navigate("/auth")
         }catch(err) {
             console.error(err)
             setError("Registartion failed")
@@ -105,7 +105,7 @@ function Signin() {
 
              }}
              inputStyle={{
-              height: "55px",
+              height: "50px",
               width: "90%",
               borderRadius: "0",
               paddingLeft: "48px",

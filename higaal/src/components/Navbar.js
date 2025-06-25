@@ -1,9 +1,32 @@
 import {useState, useRef, useEffect} from 'react';
-import "../styles/navbar.css"
+import "../styles/navbar.css";
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaHome} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+        try {
+            const token = localStorage.getItem("token");
+            const response = await axios.post("http://localshost:5000/api/auth/logout",
+                 {}, 
+                 {    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                 }
+                );
+                if(response.status === 200) {
+                    localStorage.removeItem("token");
+                    navigate("/login");
+                    alert("You've logged out Successfully")
+                }
+        }catch(err) {
+            console.error("Logout has failed", err);
+            alert("Your logout has failed, Kindly try again later")
+        }
+    }
     const navbarRef = useRef(null);
 
     const[menuOpen, setMenuOpen] = useState(false);
@@ -159,7 +182,7 @@ onClick={() => setMenuOpen(!menuOpen)}>
     ))}
 </div>
 <div className='logo2'>
-<button>Logout</button> 
+<button onClick={handleLogout}>Logout</button> 
 <img src="http://localhost:5000/uploads/cdf1.jpeg" alt='logo'/>
 </div>
 </div>
