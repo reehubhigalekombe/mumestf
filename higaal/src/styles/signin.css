@@ -49,7 +49,7 @@
 .input-arrange .pass-container span {
     position: absolute;
     top: 50%;
-    right: 0.9rem;
+    right: 0.8rem;
     transform: translateY(-50%);
     cursor: pointer;
     color: rgb(109, 106, 106);

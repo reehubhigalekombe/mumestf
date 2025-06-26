@@ -10,7 +10,7 @@ function Navbar() {
     const handleLogout = async () => {
         try {
             const token = localStorage.getItem("token");
-            const response = await axios.post("http://localshost:5000/api/auth/logout",
+            const response = await axios.post("http://localhost:5000/api/auth/logout",
                  {}, 
                  {    headers: {
                         Authorization: `Bearer ${token}`,
@@ -19,7 +19,7 @@ function Navbar() {
                 );
                 if(response.status === 200) {
                     localStorage.removeItem("token");
-                    navigate("/login");
+                    navigate("/auth");
                     alert("You've logged out Successfully")
                 }
         }catch(err) {

@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function AuthenticationPage() {
     const [email, setEmail] = useState("")
+    const[showPassword, setShowPassword] = useState(false);
     const[password, setPassword] = useState("")
     const[rememberMe, setRememberMe] = useState(false);
     const navigate  = useNavigate();
@@ -69,29 +70,36 @@ return (
 </div>
         <div className='leftBottom'>
 <form onSubmit={handleLogin}>
-               <label htmlFor='emailAdress'>Email Address</label>
+               <label htmlFor='emailAddress'>Email Address</label>
         <input 
         type='email'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         name='email'
+        id='emailAddress'
         required
         />
 <label htmlFor='password'>Password</label>
-         <input 
-         type='password'
-         value={password}
-         onChange={(e) => setPassword(e.target.value)}
-         name='password'
-         required
-        
-        />
+       <div className='pass-container'>
+        <input
+        type={showPassword ? "text" : "password"}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+         />
+         <span className='pass'
+         onClick={() => setShowPassword(v => !v)}
+         >
+{showPassword ? <VisibilityOff/> : <Visibility/>}
+         </span>
+
+       </div>
         <div className='remember'>
 <input
 type='checkbox'
 id='rememeber'
 value={rememberMe}
-onChange={(e) => setRememberMe(e.target.value)}
+onChange={(e) => setRememberMe(e.target.checked)}
 required
 />
 <label htmlFor='remember'>Remember Me</label>
