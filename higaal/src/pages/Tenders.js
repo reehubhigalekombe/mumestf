@@ -85,9 +85,11 @@ style={{
 
     style={{
         width: "100%",
-        padding: "4px",
+        padding: "10px",
         fontSize: "0.9rem",
-        borderRadius: "8px"
+        borderRadius: "8px",
+        border: "none",
+        outline: "none"
     }}
     />
 </form>

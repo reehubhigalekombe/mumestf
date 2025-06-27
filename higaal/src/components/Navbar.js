@@ -19,6 +19,7 @@ function Navbar() {
                 );
                 if(response.status === 200) {
                     localStorage.removeItem("token");
+                    sessionStorage.removeItem("token")
                     navigate("/auth");
                     alert("You've logged out Successfully")
                 }

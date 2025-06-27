@@ -5,58 +5,67 @@ function Public() {
   const[phone, setPhone] = useState("");
   const[amount, setAmount] = useState("");
   const[message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  const isValidPhone = (num) => {
-    const pattern = /^(07\d{8}|2547\d{8})$/;
-    return pattern.test(num)
-  };
+  const isValidPhone = (num) => /^2547\d{8}$/.test(num);
+  
   const handlePayment = async (e) => {
     e.preventDefault();
+    setMessage("")
 
     if(!isValidPhone(phone)){
       alert("Kindly enetr a valid MPESA number");
       return;
     }
       if(!amount || Number(amount) <10) {
-        alert("Please enetrt amount from (minimum KES 5");
+        alert("Please enetrt amount from (minimum KES 10");
         return
       }
       setLoading(true);
       setMessage("")
-    
-    const data = {
-      phone ,
-      amount: Number(amount)
-    }
+  
     try {
-      const res = await axios.post("http://localhost:5000/api/stkPush", data);
-      console.log(res.data);
-      alert("In order to complete payments Check your phone number")
+      const res = await axios.post("http://localhost:5000/api/mympesa/stkpush", {
+        phone, 
+        amount
+      });
+      setMessage(res.data.message + "-" + JSON.stringify(res.data.data))
     }catch(err) {
-      console.error(err);
-      alert("Payment failed");
-      
+     setMessage( "Error: " + (err.response?.data?.error || err.message) )
+    } finally{
+      setLoading(false)
     }
   }
   return (
 
     <div className='public'>
+
       <form onSubmit={handlePayment}>
-        <input
-        type='number'
+              <h1 className='payment-title'>PAY WITH MPESA</h1>
+      <label htmlFor='phone-number'>
+        <span>Enter Phone No.</span>
+          <input
+        type='text'
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        placeholder='Enter your Safaricom Number'
+        required
+        disabled={loading}
+            className='hello'
         />
-
-        <input
+      </label>
+<label htmlFor='amount'>
+  <span>Enter Amount</span>
+ <input
         type='number'
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        
+        required
+        disabled={loading}
+        className='hello'
         />
-        <button type='submit' 
+</label>
+       
+        <button type='submit' className='mpesaButton'
         disabled={loading}
         >{loading ? "Processing..." : "Pay Now"}
         </button>

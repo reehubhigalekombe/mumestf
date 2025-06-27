@@ -38,8 +38,8 @@ function Footer() {
 <h2>QUICK LINKS</h2>
 <Link to="/home" className='footer-links'>Home</Link>
 <Link to="latest" className='footer-links'>Latest News</Link>
-<Link to="tenders" className='footer-links'>Tenders</Link>
-<Link to="downloads" className='footer-links'>Downloads</Link>
+<Link to="/tenders" className='footer-links'>Tenders</Link>
+<Link to="/downloads" className='footer-links'>Downloads</Link>
 
 </div>
 <div className='partion2'>

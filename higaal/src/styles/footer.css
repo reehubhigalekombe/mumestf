@@ -29,7 +29,7 @@
     font-size: 40px;
   }
   .social-media a  .socio-icons:hover {
-    color: red;
+    color: black;
   }
   .footer-bot {
     display: flex;

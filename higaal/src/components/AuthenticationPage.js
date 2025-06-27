@@ -6,6 +6,9 @@ import "../styles/auth.css";
 import { Link, useNavigate } from 'react-router-dom';
 
 function AuthenticationPage() {
+    const[step, setStep] = useState(1);
+    const[otp, setOtp] = useState(""); 
+    const[message, setMessage] = useState("")
     const [email, setEmail] = useState("")
     const[showPassword, setShowPassword] = useState(false);
     const[password, setPassword] = useState("")
@@ -18,30 +21,38 @@ function AuthenticationPage() {
             const res = await axios.post("http://localhost:5000/api/auth/login", {
                 email,
                 password,
-                rememberMe
             });
-            const token = res.data.token;
-            if(rememberMe) {
-                localStorage.setItem("token", token);
-                localStorage.setItem("rememberedEmail", email)
-            } else {
-                sessionStorage.setItem("token", token)
-                sessionStorage.setItem("rememberedEmail")
-            }
-            axios.defaults.headers.common["Authorization"] = `bearer ${token}`
-            navigate("/home")
-               console.log("Login Successful", res.data)
+            setMessage(res.data.message);
+            setStep(2);
+           
         }catch(err) {
-            console.error("Login Failed try again", err.response?.data || err.message)
+            setMessage(err.response.data?.message || "Login has Failed")
         }
+    };
+
+const handleVerifyOtp = async(e) => {
+    e.preventDefault();
+    try {
+        const res = await axios.post("http://localhost:5000/api/auth/verifyotp", {
+            email, 
+            otp,
+        });
+        setMessage(res.data.message);
+        console.log("You've logged in");
+        navigate("/home")
+
+    }catch(err) {
+        setMessage(err.response?.data?.message || "OTP verification has failed")
+
     }
+}
+
         useEffect(() => {
             const savedEmail = localStorage.getItem("rememberedEmail");
             if(savedEmail) {
                 setEmail(savedEmail);
                 setRememberMe(true)
             }
-
         }, [])
 
 return (
@@ -49,12 +60,12 @@ return (
      <div className='auth-left'>
         <div className='leftTop'>
             <div className='img-wrap'>
-                           <img src='http://localhost:5000/uploads/cgd2.jpeg'  /> 
+                           <img src='http://localhost:5000/uploads/cgd2.jpeg' alt='pic'  /> 
 
             </div>
                 <div className='verticalLine'></div>
                 <div className='img-wrap'>
-     <img src='http://localhost:5000/uploads/cdf1.jpeg'  /> 
+     <img src='http://localhost:5000/uploads/cdf1.jpeg' alt='pic' /> 
             </div>
 <h1 style={{
     fontSize: "1.7rem"
@@ -69,7 +80,13 @@ return (
 </div>
 </div>
         <div className='leftBottom'>
-<form onSubmit={handleLogin}>
+            <h2>
+                {step ===1 ? "Login" : "Enter OTP"}
+            </h2>
+            {
+                message && <p>{message}</p>
+            }
+       {step ===1 ? (<form onSubmit={handleLogin}>
                <label htmlFor='emailAddress'>Email Address</label>
         <input 
         type='email'
@@ -109,6 +126,23 @@ required
         <h2 style={{ fontSize: "23px"}}>Don't have an account? <Link to="/sign" style={{textDecoration: "none", color: "blue", fontSize: "18px"}}>Sign up</Link> </h2>
         <button type='submit' style={{width: "19%"}}>Login</button>
        </form>
+
+       ) : (
+        <form onSubmit={handleVerifyOtp}>
+            <input 
+            type='text'
+            value={otp}
+            onChange={(e) => setOtp((e.target.value))}
+            required
+            placeholder='Enter the OPT sent to your email'
+            />
+<br/>
+<button type='submit' style={{ width: "29%"}}>
+    Verify OTP
+</button>
+        </form>
+       )}
+
 
         </div>
  
