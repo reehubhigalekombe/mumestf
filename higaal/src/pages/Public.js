@@ -22,19 +22,42 @@ function Public() {
         return
       }
       setLoading(true);
-      setMessage("")
+      setMessage("");
   
     try {
       const res = await axios.post("http://localhost:5000/api/mympesa/stkpush", {
         phone, 
         amount
       });
-      setMessage(res.data.message + "-" + JSON.stringify(res.data.data))
+
+      const {CheckoutRequestID} = res.data.data;
+      setMessage("The STK Push has been initiated. Kindly wait for the response");
+
+      const interval  = setInterval(async () => {
+        try {
+          const statusRes = await axios.get(
+            `http://localhost:5000/api/mympesa/status/${CheckoutRequestID}`
+          );
+          const {status, resultDesc} = statusRes.data;
+
+          if(status !== "Pending") {
+            clearInterval(interval)
+            setLoading(false)
+            setMessage(
+              status === "Sucess" ? `✅ ${resultDesc}` :  `❌${resultDesc}`
+            );
+          }
+        }catch(pollErr) {
+          clearInterval(interval);
+          setLoading(false);
+          setMessage("❌ Checking Error")
+        }
+      }, 5000)
+
     }catch(err) {
-     setMessage( "Error: " + (err.response?.data?.error || err.message) )
-    } finally{
-      setLoading(false)
-    }
+            setLoading(false)
+     setMessage( "❌ " + (err.response?.data?.error || err.message) )
+    } 
   }
   return (
 

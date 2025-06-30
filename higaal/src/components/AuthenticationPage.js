@@ -124,7 +124,7 @@ required
         </div>
        
         <h2 style={{ fontSize: "23px"}}>Don't have an account? <Link to="/sign" style={{textDecoration: "none", color: "blue", fontSize: "18px"}}>Sign up</Link> </h2>
-        <button type='submit' style={{width: "19%"}}>Login</button>
+        <button type='submit' >Login</button>
        </form>
 
        ) : (

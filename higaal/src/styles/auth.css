@@ -12,7 +12,7 @@
 .auth-left {
  display: flex;
     flex-direction: column;
-    gap: 8px;
+  justify-content: space-between;
 
 }
 .leftTop {
@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: black;
   margin-bottom: 2px;
 
@@ -38,17 +38,15 @@
     background-color: black;
   margin: 0;
 }
-
-
 .leftMiddle {
-  flex: 1;
+flex: 1;
 text-align: center;
 margin-top: 0px;
 }
 
 .leftMiddle h1 {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 0px;
 
 }
@@ -91,6 +89,8 @@ color: rgb(142, 141, 141);
   height: 38px;
   font-size: 18px;
   color: black;
+  outline: none;
+  border: 1px solid black;
 }
 .leftBottom form label {
 font-size: 18px;
@@ -141,9 +141,8 @@ color: rgb(108, 107, 107);
   color: black;
 }
 
-
 .leftBottom form button {
-  width: 20%;
+  width: 26%;
   padding: 8px;
   border: none;
   border-radius: 4px;
@@ -151,6 +150,7 @@ color: rgb(108, 107, 107);
   font-size: 18px;
   cursor: pointer;
   color: white;
+  margin-top: 0px;
 }
 .auth form button:hover{
   background-color: black;

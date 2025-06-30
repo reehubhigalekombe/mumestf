@@ -8,8 +8,14 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     const navigate = useNavigate();
     const handleLogout = async () => {
+          const token = localStorage.getItem("token");
+          if(!token) {
+            alert("You are looged out allready")
+            navigate("auth");
+            return
+          }
         try {
-            const token = localStorage.getItem("token");
+    
             const response = await axios.post("http://localhost:5000/api/auth/logout",
                  {}, 
                  {    headers: {
@@ -24,7 +30,7 @@ function Navbar() {
                     alert("You've logged out Successfully")
                 }
         }catch(err) {
-            console.error("Logout has failed", err);
+            console.error("Logout has failed", err.response?.data || err.message);
             alert("Your logout has failed, Kindly try again later")
         }
     }
