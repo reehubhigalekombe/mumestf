@@ -23,7 +23,7 @@ function Contacts() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    await axios.post("http://localhost:5000/api/auth/submission", formData)
+    await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/submission`, formData)
     alert("Message sent Succesfully")
     setFormData({
       fullName: "",

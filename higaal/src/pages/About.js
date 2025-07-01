@@ -6,32 +6,32 @@ function About() {
 
   const images = [
     {
-      src: "http://localhost:5000/uploads/n9.jpeg",
+      src: "https://mumestbck.onrender.com/uploads/n9.jpeg",
       title: "Nabongo the King",
       link: "https//orbitech/"
   },
   {
-    src: "http://localhost:5000/uploads/n8.jpeg",
+    src: "https://mumestbck.onrender.com/uploads/n8.jpeg",
     title: "Nabongo the King",
     link: "https//orbitech/"
 },
 {
-  src: "http://localhost:5000/uploads/n6.jpeg",
+  src: "https://mumestbck.onrender.com/uploads/n6.jpeg",
   title: "Nabongo the King",
   link: "https//orbitech/"
 },
 {
-  src: "http://localhost:5000/uploads/n11.jpeg",
+  src: "https://mumestbck.onrender.com/uploads/n11.jpeg",
   title: "Nabongo the King",
   link: "https//orbitech/"
 },
 {
-  src: "http://localhost:5000/uploads/n12.jpeg",
+  src: "https://mumestbck.onrender.com/uploads/n12.jpeg",
   title: "Nabongo the King",
   link: "https//orbitech/"
 },
 {
-  src: "http://localhost:5000/uploads/n1.webp",
+  src: "https://mumestbck.onrender.com/uploads/n1.webp",
   title: "Nabongo the King",
   link: "https//orbitech/"
 },
@@ -47,7 +47,7 @@ function About() {
 </div>
 <div className='heri-middle'>
 
-<div className='middle1' style={{backgroundImage: `url("http://localhost:5000/uploads/mum1.jpg")`}}>
+<div className='middle1' style={{backgroundImage: `url("https://mumestbck.onrender.com/uploads/mum1.jpg")`}}>
 
 </div>
 <div className='middle2' >
@@ -75,7 +75,7 @@ function About() {
       lobally to formulate climate change and health policies and strategies via training. 
       <Link to="/home" style={{textDecoration: "none", color: "red", fontWeight: "bold"}}><em>Read More</em></Link></p>
 </div>
-<div className='middle3' style={{backgroundImage: `url("http://localhost:5000/uploads/mum1.jpg")`}}>
+<div className='middle3' style={{backgroundImage: `url("https://mumestbck.onrender.com/uploads/mum1.jpg")`}}>
 
 </div>
 </div>

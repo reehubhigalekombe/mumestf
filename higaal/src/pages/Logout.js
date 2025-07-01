@@ -8,7 +8,7 @@ function Logout() {
         const token = localStorage.getItem("token") || sessionStorage.getItem("token")
         const logoutUser = async () => {
             try {
-                await axios.post("http://localhost:5000/api/auth/logout",
+                await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/logout`,
                     {}, {
                         headers: {
                             Authorization: `Bearer ${token}`

@@ -97,7 +97,7 @@ font-size: 18px;
 color: rgb(108, 107, 107);
 }
 .auth-right {
-  background-image: url("http://localhost:5000/uploads/pk12.jpg");
+  background-image: url("https://mumestbck.onrender.com/uploads/pk12.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -16,7 +16,7 @@ function Navbar() {
           }
         try {
     
-            const response = await axios.post("http://localhost:5000/api/auth/logout",
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/logout`,
                  {}, 
                  {    headers: {
                         Authorization: `Bearer ${token}`,
@@ -144,7 +144,7 @@ const toggleSubMenu = (index) => {
 </div>
 <div className='nav-bot'>
 <div className='logo1'>
-<img src="http://localhost:5000/uploads/cgd2.jpeg" alt='logo'/>
+<img src="https://mumestbck.onrender.com/uploads/cgd2.jpeg" alt='logo'/>
 <button>Admin</button> 
 </div>
 
@@ -190,7 +190,7 @@ onClick={() => setMenuOpen(!menuOpen)}>
 </div>
 <div className='logo2'>
 <button onClick={handleLogout}>Logout</button> 
-<img src="http://localhost:5000/uploads/cdf1.jpeg" alt='logo'/>
+<img src="https://mumestbck.onrender.com/uploads/cdf1.jpeg" alt='logo'/>
 </div>
 </div>
     </div>

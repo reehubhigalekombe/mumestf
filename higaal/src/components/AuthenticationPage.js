@@ -18,7 +18,7 @@ function AuthenticationPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/login", {
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
                 email,
                 password,
             });
@@ -33,7 +33,7 @@ function AuthenticationPage() {
 const handleVerifyOtp = async(e) => {
     e.preventDefault();
     try {
-        const res = await axios.post("http://localhost:5000/api/auth/verifyotp", {
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/verifyotp`, {
             email, 
             otp,
         });
@@ -60,12 +60,12 @@ return (
      <div className='auth-left'>
         <div className='leftTop'>
             <div className='img-wrap'>
-                           <img src='http://localhost:5000/uploads/cgd2.jpeg' alt='pic'  /> 
+                           <img src='https://mumestbck.onrender.com/uploads/cgd2.jpeg' alt='pic'  /> 
 
             </div>
                 <div className='verticalLine'></div>
                 <div className='img-wrap'>
-     <img src='http://localhost:5000/uploads/cdf1.jpeg' alt='pic' /> 
+     <img src='https://mumestbck.onrender.com/uploads/cdf1.jpeg' alt='pic' /> 
             </div>
 <h1 style={{
     fontSize: "1.7rem"

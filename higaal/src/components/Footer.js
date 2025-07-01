@@ -45,12 +45,12 @@ function Footer() {
 <div className='partion2'>
 <div className='footer-right'>
           <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'>
-          <img src="http://localhost:5000/uploads/pa1.jpeg" alt='pa'/></a>
+          <img src="https://mumestbck.onrender.com/uploads/pa1.jpeg" alt='pa'/></a>
           <h4>Parliament of Kenya</h4>
           </div>
 <div className='footer-right'>
       <a href='http://www.parliament.go.ke/the-national-assembly/hon-salasya-peter-kalerwa'>
-      <img src="http://localhost:5000/uploads/pt1.jpg" alt='pa'/></a>
+      <img src="https://mumestbck.onrender.com/uploads/pt1.jpg" alt='pa'/></a>
       <h4>  Hon. Peter Kalerwa Salasya (Incumbent)
       </h4>
       </div>

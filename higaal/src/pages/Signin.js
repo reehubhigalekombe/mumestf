@@ -37,7 +37,7 @@ function Signin() {
             return;
         }
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/signup", formData)
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, formData)
             console.log(res.data);
             alert("Registration was Successful!")
             navigate("/auth")

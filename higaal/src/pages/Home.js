@@ -171,7 +171,7 @@ style={{
 <div className="bottom-wrap"> 
   <div className="bottom-box">
     <div className="img-cont">
-<img src="https://mumestbck.onrender.com" alt="news" />
+<img src="https://mumestbck.onrender.com/uploads/pt2.jpg" alt="news" />
     </div>
     <div className="news-cont">
 <Link to="/home" className="link-container">
@@ -183,7 +183,7 @@ Public Service Commission Chairperson Amb. Anthony Muchiri has called upon autho
   </div>
     <div className="bottom-box">
      <div className="img-cont">
-<img src="http://localhost:5000/uploads/p3.jpeg" alt="news" />
+<img src="https://mumestbck.onrender.com/uploads/p3.jpeg" alt="news" />
     </div>
     <div className="news-cont">
 <Link to="/home" className="link-container">
@@ -195,7 +195,7 @@ Public Service Commission Chairperson Amb. Anthony Muchiri has called upon autho
     </div>
       <div className="bottom-box">
      <div className="img-cont">
-<img src="http://localhost:5000/uploads/p4.jpg" alt="news" />
+<img src="https://mumestbck.onrender.com/uploads/p4.jpg" alt="news" />
     </div>
     <div className="news-cont">
 <Link to="/home" className="link-container">
