@@ -5,7 +5,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    margin-top: var(--navbar-height, 100px);
+}
+.herittage button {
+    width: 9%;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(129, 222, 129) ;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 .heri1 {
     flex: 1;
@@ -80,4 +91,19 @@
     height: 250px;
     border-radius: 0.5rem;
     display: block;
+}
+.image-titles {
+       color: blue;
+    font-size: 1.3rem;
+}
+.description {
+    color: black;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .herittage {
+           padding-top: var(--navbar-height, 100px);
+    }
 }

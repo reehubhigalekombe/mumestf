@@ -3,9 +3,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 40px;
     background-color: whitesmoke;
-    
+    margin-top: var(--navbar-height, 100px);
+    box-sizing: border-box;
+    padding: 0 3rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .herittage-item {
     position: relative;
@@ -14,10 +16,14 @@
     border-radius: 0.5rem;
     box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
+    background-color: rgb(234, 237, 234);
+    padding: 1rem;
+    text-align: justify;
 }
 .herittage-item:hover {
     box-shadow:  0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(1.01);
+    transform: scale(1.01);    
+    background-color: rgb(220, 217, 217);
 }
 .herittage-image {
     width: 100%;
@@ -27,23 +33,32 @@
     object-fit: cover;
 }
 .image-titles {
-    color: rgb(0, 0, 0);
-    width: 100%;
-    padding: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius:  0.5rem;
+    color: blue;
+    font-size: 1.3rem;
+}
+.image-titles:hover {
+    color: black;
+}
+.description {
+    color: black;
     font-size: 1rem;
     text-align: justify;
-    bottom: 0;
-    margin-top: var(--navbar-height, 100px);
 }
-@media(max-width: 786px) {
+.description:hover{
+    color:  blue;
+}
+@media(max-width: 768px) {
     .herittageimg {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr)
+        grid-template-columns: 1fr;
+           padding-top: var(--navbar-height, 100px);
     }
     img {
-        width: 80%;
+        width: 100%;
+        height: auto;
+    }
+    .image-titles {
+        font-size: 14px;
+        text-align: justify;
     }
 
 }

@@ -45,7 +45,7 @@ function Contacts() {
  <h1>Contact Us</h1>
     </div>
     <div className="top2">
-<img src="http://localhost:5000/uploads/bull.jpg" alt="top2"/> 
+<img src="http://localhost:5000/uploads/pt2.jpg" alt="top2"/> 
     </div>
   </div>
   <div className="contact-top2">

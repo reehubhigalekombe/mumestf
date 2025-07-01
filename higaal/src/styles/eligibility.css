@@ -54,3 +54,16 @@
 background-color: black;
 }
 
+@media (max-width: 768px) {
+.eligibility {
+      padding-top: var(--navbar-height, 100px);
+    flex-direction: column;
+
+}
+.eligibility .eligibility1 {
+    flex-direction: column;
+    text-align: justify;
+}
+
+}
+

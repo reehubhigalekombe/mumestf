@@ -25,6 +25,7 @@
     flex-direction: row;
     color: white;
     font-size: 25px;
+    padding: 0 3rem;
 }
 .contact-top1 img {
     width: 240px;
@@ -207,24 +208,74 @@ textarea:focus {
 
 .contact-bottom2 {
     flex: 1;
-    
+    position: relative;
+    width: 100%;
+    margin:1rem 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.contact-bottom2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+@media (max-width: 768px){
+    .contact {
+        padding-top: var(--navbar-height, 100px);
+    }
 }
 @media (max-width: 992px) {
-     .contact-wrap {
-        grid-template-columns: (2, 1fr);
-        padding: 0 20px;
+    .contact-bottom1 {
+        margin: 0 4rem;
+        padding: 24px;
     }
 }
-@media (max-width: 600px) {
-     .contact-wrap {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-    .contact-wrap .box, .box1 {
+
+@media (max-width: 768px) {
+     .contact-top1 {
+        flex-direction: column;
+        padding: 0 3rem;
         height: auto;
-        padding: 20px;
+     }
+     .contact-top .top1, .contact-top .top2 {
+        justify-content: center;
+        text-align: center;
+     }
+     .contact-top .top1 h1 {
+        font-size: 2rem;
+     }
+     .contact-top1 img {
+        width: 100px;
+        height: 100px;
+     }
+    .contact-bottom1 {
+        margin: 0 16px;
+        padding: 16px;
     }
-    .contact-bottom iframe{
-            height: 300px;
+}
+@media (max-width: 768px){
+    .contact-bot {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .contact-bot input, .contact-bot .react-tel-input input {
+        width: 100% !important;
+    }
+}
+@media (max-width: 768px) {
+    .contact-bottom1 form {
+        width: 100%;
+    }
+    .contact-bottom1 button {
+        width: 28%;
+    }
+}
+@media (max-width: 768px) {
+   .contact-middle .contact-wrap {
+        grid-template-columns: 1fr;
     }
 }

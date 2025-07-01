@@ -84,7 +84,9 @@ return (
                 {step ===1 ? "Login" : "Enter OTP"}
             </h2>
             {
-                message && <p>{message}</p>
+                message && <p
+                className='message.toLowerCase().includes("fail) ?  "error" : "succes '
+                >{message}</p>
             }
        {step ===1 ? (<form onSubmit={handleLogin}>
                <label htmlFor='emailAddress'>Email Address</label>
@@ -101,6 +103,7 @@ return (
         <input
         type={showPassword ? "text" : "password"}
         value={password}
+        id='password'
         onChange={(e) => setPassword(e.target.value)}
         required
          />
@@ -114,8 +117,8 @@ return (
         <div className='remember'>
 <input
 type='checkbox'
-id='rememeber'
-value={rememberMe}
+id='remember'
+checked={rememberMe}
 onChange={(e) => setRememberMe(e.target.checked)}
 required
 />

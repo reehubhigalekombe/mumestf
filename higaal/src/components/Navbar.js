@@ -49,7 +49,7 @@ const toggleSubMenu = (index) => {
             subpages: [
             ] },
         {title: "ABOUT",
-            link: "/herittage",
+            link: "/about",
             subpages: [
                 {title: "Herittage", link: "/herittage"},
 

@@ -1,5 +1,6 @@
-import React from 'react'
+
 import "../styles/herittage.css";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 function Herittage() {
 
@@ -7,36 +8,40 @@ function Herittage() {
     {
       src: "http://localhost:5000/uploads/n9.jpeg",
       title: "Nabongo the King",
+        description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
       link: "https//orbitech/"
   },
   {
     src: "http://localhost:5000/uploads/n8.jpeg",
     title: "Nabongo the King",
+      description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
     link: "https//orbitech/"
 },
 {
   src: "http://localhost:5000/uploads/n6.jpeg",
   title: "Nabongo the King",
+    description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
   link: "https//orbitech/"
 },
 {
   src: "http://localhost:5000/uploads/n11.jpeg",
   title: "Nabongo the King",
+    description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
   link: "https//orbitech/"
 },
 {
   src: "http://localhost:5000/uploads/n12.jpeg",
   title: "Nabongo the King",
+    description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
   link: "https//orbitech/"
 },
 {
   src: "http://localhost:5000/uploads/n1.webp",
   title: "Nabongo the King",
+    description: "Nabongo Mumia Shiundu was a prince who became 17th King of the Wanga Kingdom in pre-colonial Kenya.",
   link: "https//orbitech/"
 },
-
-
-    
+   
 ]
   return (
     <div className='herittage'>
@@ -85,13 +90,21 @@ function Herittage() {
       <div className='image-titles'>
         {item.title}
       </div>
+      <p className="description">{item.description}</p>
       
     </a>
   )) }
 
-<h4><Link to="/herri"><em>View More &rarr;</em></Link></h4>
+
 
 </div>
+
+<button><Link to="/herri"
+style={{
+  color: "white",
+textDecoration: "none"
+}}>VIEW MORE <FaArrowAltCircleRight/></Link></button>  
+
     </div>
   )
 }

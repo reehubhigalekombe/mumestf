@@ -58,3 +58,13 @@
 .portal-bottom2 button:hover {
     background-color: black;
 }
+
+@media (max-width: 768px) {
+    .portal {
+        flex-direction: column;
+         padding-top: var(--navbar-height, 100px);
+    }
+    .portal-bottom2 button {
+        width: 35%;
+    }
+}

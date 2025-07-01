@@ -88,3 +88,9 @@
         max-width: 100%;
     }
 }
+@media (max-width: 768px){
+    .wards {
+        padding-top: var(--navbar-height, 100px);
+    }
+}
+ 

@@ -78,7 +78,7 @@ color: rgb(142, 141, 141);
   position: relative;
 }
 .leftBottom form {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -110,7 +110,7 @@ color: rgb(108, 107, 107);
 .leftBottom  .pass-container span {
     position: absolute;
     top: 50%;
-    right: 2rem;
+    right: 3rem;
     transform: translateY(-50%);
     cursor: pointer;
     color: rgb(109, 106, 106);
@@ -155,4 +155,48 @@ color: rgb(108, 107, 107);
 .auth form button:hover{
   background-color: black;
   color: white;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+
+@media (max-width: 768px ) {
+  .auth {
+    grid-template-columns: 1fr;
+             padding-top: var(--navbar-height, 100px);
+  }
+   .auth .auth-right{
+  display: none;
+  }
+  .leftBottom {
+    margin: 0 16px;
+  }
+  .leftBottom form {
+    width: 90%;
+  }
+  .leftBottom form input {
+    width: 100% !important;
+  }
+  .leftBottom form button {
+    width: 26%;
+  }
+  .remember {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .remember .forgot-pass {
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+  .leftBottom  .pass-container span {
+    position: absolute;
+    top: 50%;
+    right: 0.1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(109, 106, 106);
+}
 }

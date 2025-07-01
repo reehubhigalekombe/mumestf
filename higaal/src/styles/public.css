@@ -57,3 +57,12 @@ form label {
   border-radius: 8px;
     background-color: rgb(129, 222, 129);
 }
+
+@media (max-width: 768px) {
+  .public {
+    flex-direction: column;
+           padding-top: var(--navbar-height, 100px);
+}
+
+  }
+
