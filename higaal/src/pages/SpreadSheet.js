@@ -1,4 +1,4 @@
-import React from 'react';
+
 import "../styles/spreadsheet.css";
 import {CSVLink} from "react-csv";
 import DownloadIcon from "@mui/icons-material/Download"
@@ -44,7 +44,48 @@ function SpreadSheet() {
               date: "1st June, 2025",
               close: "Closes in 2 Months",
               addendum: 'None',
-              status: "Active"}
+              status: "Active"},
+                 {id: "MECDF /OT/001/2025-2027", 
+            number: "MECDF//OS/001/2025-2027"
+             ,descr: "MWIRACHE SPRING WATER SERVICES PROJECT",
+             proc: "Mumias East NG-CDF",
+              proc1: "Open Tender", 
+              proc2: 'Water Works',
+              date: "1st June, 2025",
+              close: "Closes in 2 Months",
+              addendum: 'None',
+              status: "Active"},
+                {id: "MECDF /OT/002/2025-2027", 
+            number: "MECDF /OT/023/2025-2027"
+             ,descr: "ELUCHE-MUSANGO-KHABAKAYA ROAD PROJECT",
+             proc: "Mumias East NG-CDF",
+              proc1: "Open Tender", 
+              proc2: 'Road Works',
+              date: "1st June, 2025",
+              close: "Closes in 2 Months",
+              addendum: 'None',
+              status: "Active"},
+                {id: "YEDFB /OS/001/2025-2027", 
+            number: "MECDF /OT/001/2025-2027"
+             ,descr: "ST. PETERS KHABAKAYA SECONDARY SCHOOL (5 CLASSROOMS, 4 PIT LATRINE AND BOREHOLE PROJECTS",
+             proc: "Mumias East NG-CDF",
+              proc1: "Open Tender", 
+              proc2: 'Road Works',
+              date: "1st June, 2025",
+              close: "Closes in 2 Months",
+              addendum: 'None',
+              status: "Active"},
+                  {id: "YEDFB /OS/001/2025-2027", 
+            number: "MECDF /OT/001/2025-2027"
+             ,descr: "ST. PETERS KHABAKAYA SECONDARY SCHOOL (5 CLASSROOMS, 4 PIT LATRINE AND BOREHOLE PROJECTS",
+             proc: "Mumias East NG-CDF",
+              proc1: "Open Tender", 
+              proc2: 'Road Works',
+              date: "1st June, 2025",
+              close: "Closes in 2 Months",
+              addendum: 'None',
+              status: "Active"},
+              
     ];
     const headers = [
         
@@ -60,7 +101,8 @@ function SpreadSheet() {
     ]
   return (
     <div className='spreadsheet'>
- <table border="1" cellPadding="5">
+ <div className="table-pot">
+  <table border="1" cellPadding="5">
      <thead>
     <tr>
         <th>Tender No.</th>
@@ -92,6 +134,7 @@ function SpreadSheet() {
 )) }
   </tbody>
  </table>
+ </div>
  <button style={{width: "%", padding:"8px"}}>
     <CSVLink 
     data={TenderInformation}

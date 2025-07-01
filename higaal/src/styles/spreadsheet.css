@@ -3,6 +3,11 @@
     height: auto;
     margin: 16px;
 }
+
+.table-pot {
+    overflow: auto;
+    width: 100%;
+}
 .spreadsheet button {
     width: 14%;
     cursor: pointer;
@@ -19,10 +24,25 @@
     border-collapse: collapse;
     width: 100%;
     background-color: white;
-    table-layout: fixed;
+    table-layout: auto;
+    min-width: 799px;
 }
-.spreadsheet table th {
+.spreadsheet th, .spreadsheet td {
     text-align: justify;
-    background-color: rgb(181, 227, 181);
+    background-color: white;
     font-size: 1rem;
+    padding: 8px;
+    font: 14px;
+    border: 1px solid balck;
+    
+}
+@media screen and (max-width: 768px) {
+    .spreadsheet table {
+        font-size: 12px;
+        min-width: 600px;
+        font-size: 12px;
+    }
+    .spreadsheet button {
+        width: 30%;
+    }
 }

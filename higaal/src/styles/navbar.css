@@ -140,25 +140,25 @@
 
 .menu-bar {
     display: none;
-    color: black;
+    color: white;
     padding: 8px;
     cursor: pointer;
+    margin-top: 7px;
 }
-
 @media (max-width: 900px) {
     .nav-top {
         flex-direction: column;
         gap: 5px;
     }
     .menu-bar {
-        display: block;
+        display: inline-block
     }
 
     .logo-middle {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: rgb(129, 222, 129) ;
+        background-color: rgb(8, 8, 8) ;
         padding: 10px 0;
         position: absolute;
         top: 50%;
@@ -193,12 +193,13 @@
         flex-direction: column;
 
     }
+
     .nav-bot .links {
         display: block;
         font-weight: 500;
         color: black;
         padding: 10px 20px;
         font-size: 14px;
-        color: blue;
+        color: white;
     }
 }

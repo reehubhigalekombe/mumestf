@@ -32,7 +32,6 @@ import Eligibility from "./pages/Eligibility";
 import TenderStatus from "./pages/TenderStatus";
 import TenderForm from "./pages/TenderForm";
 import Downloads from "./pages/Downloads";
-import PrivateRoute from "./components/PrivateRoute";
 import About from "./pages/About";
 
 function App() {
@@ -43,29 +42,35 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/auth"/>}/>
         <Route path="/auth"  element={<AuthenticationPage/>}/>
-<Route path="/home" element={<PrivateRoute><Home/></PrivateRoute>}/>
-<Route path="/herittage" element={<PrivateRoute><About/></PrivateRoute>} />
-<Route path="/mission" element={<Mission/>}/>
-<Route path="/contacts" element={<PrivateRoute><Contacts/></PrivateRoute>} />
-<Route path="/herittage" element={<Herittage/>}/>
-<Route path="/tenders" element = {<PrivateRoute><Tenders/></PrivateRoute>} />
-<Route path="/wards" element={<PrivateRoute><Wards/></PrivateRoute>}/>
-<Route path="/latest" element={<PrivateRoute><Latest/></PrivateRoute>}/>
+        <Route path="/mission" element={<Mission/>}/>
+<Route path="/latest" element={<Latest/>}/>
+<Route path="/wards" element={<Wards/>}/>
 <Route path="/sign" element={<Signin/>}/>
 <Route  path="/logout"  element={<Logout/>}  />
 <Route path="/testimonies" element={<Testimonies/>}/>
 <Route path="/herri" element={<HerittageImages/>}/>
-<Route path="/portal" element={<PrivateRoute><Student/></PrivateRoute>}/>
+<Route path="/portal" element={<Student/>}/>
 <Route path="/spreadsheet" element={<SpreadSheet/>} />
-<Route path="/public" element={<PrivateRoute><Public/></PrivateRoute>}/>
+<Route path="/public" element={<Public/>}/>
 <Route path="/forgot" element={<ForgotPassword/>} />
 <Route path="/reset-password/:token" element={<ResetPass/>} />
-<Route path="/status" element={<PrivateRoute><Status/></PrivateRoute>}/>
+<Route path="/status" element={<Status/>}/>
 <Route path="/application" element={<Application/>}/>
-<Route path="/eligibility" element={<PrivateRoute><Eligibility/></PrivateRoute>} />
+<Route path="/eligibility" element={<Eligibility/>} />
 <Route path="/tenderstatus" element={<TenderStatus/>} />
 <Route path="tform" element={<TenderForm/>} />
-<Route path="/downloads" element={<PrivateRoute><Downloads/></PrivateRoute>} />
+
+
+
+<Route path="/contacts" element={<Contacts/>} />
+<Route path="/home" element={<Home/>}/>
+<Route path="/herittage" element={<About/>} />
+<Route path="/herittage" element={<Herittage/>}/>
+<Route path="/tenders" element = {<Tenders/>} />
+<Route path="/downloads" element={<Downloads/>} />
+
+
+
       </Routes>
       <FloatingButton/>
       <Footer/>

@@ -31,7 +31,7 @@ function Home() {
           placeholder="Search for our Services........."
           />
           <FaSearch 
-             style={{position: "absolute", top: '23.2%', right: "22px", color: "grey",  transform: "translate(-50%",  cursor: "pointer",  fontSize: "16px" }}
+             style={{position: "absolute", top: '23.2%', right: "130px", color: "grey",  transform: "translate(-50%",  cursor: "pointer",  fontSize: "16px" }}
           />
          </form>
          </div>
