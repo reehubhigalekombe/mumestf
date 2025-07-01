@@ -171,7 +171,7 @@ style={{
 <div className="bottom-wrap"> 
   <div className="bottom-box">
     <div className="img-cont">
-<img src="http://localhost:5000/uploads/pt2.jpg" alt="news" />
+<img src="https://mumestbck.onrender.com" alt="news" />
     </div>
     <div className="news-cont">
 <Link to="/home" className="link-container">
