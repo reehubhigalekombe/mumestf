@@ -104,6 +104,6 @@
 
 @media (max-width: 768px) {
     .herittage {
-           padding-top: var(--navbar-height, 100px);
+           padding-top: var(--navbar-height, 30px);
     }
 }

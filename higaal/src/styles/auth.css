@@ -166,7 +166,7 @@ color: rgb(108, 107, 107);
 @media (max-width: 768px ) {
   .auth {
     grid-template-columns: 1fr;
-             padding-top: var(--navbar-height, 100px);
+             padding-top: var(--navbar-height, 30px);
   }
    .auth .auth-right{
   display: none;

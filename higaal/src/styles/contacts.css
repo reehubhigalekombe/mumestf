@@ -225,7 +225,7 @@ textarea:focus {
 }
 @media (max-width: 768px){
     .contact {
-        padding-top: var(--navbar-height, 100px);
+        padding-top: 30px
     }
 }
 @media (max-width: 992px) {
