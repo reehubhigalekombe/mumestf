@@ -56,7 +56,6 @@ background-color: black;
 
 @media (max-width: 768px) {
 .eligibility {
-padding-top: 40px;
     flex-direction: column;
 
 }
@@ -66,7 +65,7 @@ padding-top: 40px;
     margin: 0 1rem ;
 }
 .eligibility3 button {
-    width: 32%;
+    width: 38%;
 }
 
 }

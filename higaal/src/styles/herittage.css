@@ -37,20 +37,18 @@
     flex: 3;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 2px;
     margin-top: 5px;
     
 }
-.middle1 {
+.middle1, .middle3 {
     flex: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 8px;
-
 }
 .middle2 {
-    flex: 2;
+    flex: 3;
     background-color: rgb(129, 222, 129);
     border-radius: 8px;
     text-align: justify;
@@ -63,13 +61,7 @@
     padding-left: 10px;
     
 }
-.middle3 {
-    flex: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 8px;
-}
+
 .middle2 h1 {
     font-size: 26px;
     margin-bottom: 0px;
@@ -96,14 +88,52 @@
        color: blue;
     font-size: 1.3rem;
 }
+
 .description {
     color: black;
     font-size: 1rem;
     text-align: justify;
 }
-
+.heri2 button {
+    width: 30%;
+    cursor: pointer;
+    padding: 8px;
+ background-color: rgb(129, 222, 129);
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    
+}
+.heri2 button:hover{
+       background-color: black;
+}
 @media (max-width: 768px) {
-    .herittage {
-           padding-top: var(--navbar-height, 30px);
+.middle1, .middle3 {
+    display: none;
+}
+.heri1 h1 {
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.heri1 h2 {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+}
+
+
+@media(max-width: 768px) {
+    .heri2 {
+        grid-template-columns: 1fr;
     }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .image-titles {
+        font-size: 14px;
+        text-align: justify;
+    }
+
 }
