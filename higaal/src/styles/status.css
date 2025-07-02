@@ -20,6 +20,8 @@
 .status-bottom {
     height: auto;
     margin: 0 2.5rem;
+    overflow: auto;
+
 }
 .status-bottom table{
     background-color: white;
@@ -53,4 +55,27 @@
 .status-bottom button:hover{
     background-color: rgb(129, 222, 129);
 
+}
+
+@media (max-width: 768px) {
+    .status {
+        margin: 8px;
+            padding-top: var(--navbar-height, 100px);
+
+    }
+    .status .status-top {
+        margin: 0 16px;
+        font: 14px;
+    }
+    .status-bottom {
+        margin: 0 16px;
+    }
+    .status-bottom table th, .status-bottom table td {
+        font-size: 12px;
+        pad: 0.25rem;
+    }
+    .status-bottom button {
+        width: 20%;
+        font-size: 8px;
+    }
 }

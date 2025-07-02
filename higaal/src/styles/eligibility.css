@@ -56,13 +56,17 @@ background-color: black;
 
 @media (max-width: 768px) {
 .eligibility {
-      padding-top: var(--navbar-height, 100px);
+padding-top: 40px;
     flex-direction: column;
 
 }
-.eligibility .eligibility1 {
+ .eligibility2, .eligibility3 {
     flex-direction: column;
     text-align: justify;
+    margin: 0 1rem ;
+}
+.eligibility3 button {
+    width: 32%;
 }
 
 }

@@ -62,9 +62,15 @@
 @media (max-width: 768px) {
     .portal {
         flex-direction: column;
-         padding-top: var(--navbar-height, 100px);
+        
+
+       
+    }
+    .portal-bottom{
+                margin: 0 1rem;
     }
     .portal-bottom2 button {
         width: 35%;
+        margin: 0 1rem;
     }
 }
