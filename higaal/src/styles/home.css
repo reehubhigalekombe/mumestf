@@ -475,4 +475,26 @@ border: none;
       font-size: 25px;
       text-align: center;
     }
+    .opps {
+      margin-bottom: 1.5rem;
+    }
+    .home-bottom2l {
+      margin-bottom:  10px;
+    }
+    .home-bottom2l h1 {
+      font-size: 20px;
+    }
+    .home-bottom2r {
+      flex-direction: column;
+      margin-top: 8px;
+    }
+       .home-bottom2r .bottom-right2 {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+       .home-bottom2r .bottom-right2 ul li  {
+        font-size: 20px;
+
+       }
 }
