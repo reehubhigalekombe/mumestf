@@ -177,6 +177,7 @@
         justify-content: space-around;
         gap: 5px;
     }
+
     .tender-table {
         flex-direction: column;
         gap: 16px;
@@ -184,5 +185,6 @@
     .tender-table button {
         width: 35%;
     }
+
     
 }

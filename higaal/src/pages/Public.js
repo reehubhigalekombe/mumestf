@@ -25,7 +25,7 @@ function Public() {
       setMessage("");
   
     try {
-      const res = await axios.post("http://localhost:5000/api/mympesa/stkpush", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/mympesa/stkpush`, {
         phone, 
         amount
       });
@@ -36,7 +36,7 @@ function Public() {
       const interval  = setInterval(async () => {
         try {
           const statusRes = await axios.get(
-            `http://localhost:5000/api/mympesa/status/${CheckoutRequestID}`
+            `${process.env.REACT_APP_API_URL}/api/mympesa/status/${CheckoutRequestID}`
           );
           const {status, resultDesc} = statusRes.data;
 
@@ -44,7 +44,7 @@ function Public() {
             clearInterval(interval)
             setLoading(false)
             setMessage(
-              status === "Sucess" ? `✅ ${resultDesc}` :  `❌${resultDesc}`
+              status === "Sucesss" ? `✅ ${resultDesc}` :  `❌${resultDesc}`
             );
           }
         }catch(pollErr) {

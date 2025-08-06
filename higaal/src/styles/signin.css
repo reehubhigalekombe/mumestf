@@ -1,102 +1,95 @@
 .signin-page {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    color: black;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
-    margin-top: var(--navbar-height, 100px);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: black;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  margin-top: var(--navbar-height, 100px);
 }
 .sign-left {
-    flex: 1;
-    background-image: url("https://mumestbck.onrender.com/uploads/p3.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
-
+  flex: 1;
+  background-image: url("https://mumestbck.onrender.com/uploads/p3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 75% 0, 60% 100%, 0% 100%);
 }
-.sign-right form{
-    flex: 1;
-    gap: 4px;margin: 0 1rem;
-
- 
+.sign-right form {
+  flex: 1;
+  gap: 4px;
+  margin: 0 1rem;
 }
 .sign-right h1 {
-    color: black;
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
 }
 .sign-right p {
-    color: rgb(92, 90, 90);
-    font-size: 18px;
+  color: rgb(92, 90, 90);
+  font-size: 18px;
 }
 .input-arrange {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 10px;
-    position: relative;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 10px;
+  position: relative;
 }
 .input-arrange .pass-container {
-    position: relative;
-    flex: 1;
-    margin-top: 0px;
+  position: relative;
+  flex: 1;
+  margin-top: 0px;
 }
 .input-arrange .pass-container span {
-    position: absolute;
-    top: 50%;
-    right: 0.8rem;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: rgb(109, 106, 106);
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(109, 106, 106);
 }
 
-.input-arrange .pass-container input :focus{
-    outline: none;
+.input-arrange .pass-container input :focus {
+  outline: none;
 }
 .input-arrange:last-child {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
-.input-arrange input{
-    width: 96%;
-    flex: 1;
-    height: 39px;
-    border: 1px solid grey;
-    transition: border-color 0.5s ease-in-out;
+.input-arrange input {
+  width: 96%;
+  flex: 1;
+  height: 39px;
+  border: 1px solid grey;
+  transition: border-color 0.5s ease-in-out;
 }
 .input-arrange input:focus {
-    outline: none;
+  outline: none;
 }
 .phone {
-     width: 90%;
-    flex: 1;
-    height: 32px;
-    border: 1px solid grey;
-    transition: border-color 0.5s ease-in-out;
-
+  width: 90%;
+  flex: 1;
+  height: 32px;
+  border: 1px solid grey;
+  transition: border-color 0.5s ease-in-out;
 }
-.input-arrange form  input:focus  {
-    outline: none;
+.input-arrange form input:focus {
+  outline: none;
 }
 .sign-right form button {
-    cursor: pointer;
-    background-color: rgb(129, 222, 129);
-    width: 15%;
-    padding: 8px;
-    color: white;
-    border: none;
-    border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(129, 222, 129);
+  width: 15%;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 8px;
 }
 .sign-right button:hover {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
-
-
-
-    
