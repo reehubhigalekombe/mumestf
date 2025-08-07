@@ -49,7 +49,7 @@ function About() {
     <div className='herittage'>
 <div className='heri1' >
 <h1>Our Herritage Our Pride - "ingo ni ingo Abanbefu"</h1>
-<h2><em>obulala ni abwene </em></h2>
+<h2>obulala ni abwene </h2>
 </div>
 <div className='heri-middle'>
 
